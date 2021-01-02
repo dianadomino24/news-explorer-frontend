@@ -13,15 +13,15 @@ const mainApiConfig = {
 };
 
 const apiRoutes = {
-    SIGNUP: '/signup',
-    SIGNIN: '/signin',
-    SIGNOUT: '/signout',
-    ME: '/users/me',
-    ARTICLES: '/articles',
+  SIGNUP: '/signup',
+  SIGNIN: '/signin',
+  SIGNOUT: '/signout',
+  ME: '/users/me',
+  ARTICLES: '/articles',
 };
 
 export {
-    mainApiConfig,
-    newsApiConfig,
-    apiRoutes,
+  mainApiConfig,
+  newsApiConfig,
+  apiRoutes,
 };
