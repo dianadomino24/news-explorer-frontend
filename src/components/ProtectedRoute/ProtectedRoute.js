@@ -1,10 +1,11 @@
 import React from 'react'
 import { Route, Redirect } from 'react-router-dom'
 
-const ProtectedRoute = ({ isLoggedIn,component: Component, ...props }) => {
+const ProtectedRoute = ({ isLoggedIn, component: Component, ...props }) => {
   return (
-    <Route>
-      {() =>
+    <Route exact path="/saved-news">
+      {
+      () =>
         isLoggedIn === true ? (
           <Component {...props} />
         ) : (
@@ -12,7 +13,7 @@ const ProtectedRoute = ({ isLoggedIn,component: Component, ...props }) => {
         )
       }
     </Route>
-  )
+  );
 }
 
 export default ProtectedRoute
