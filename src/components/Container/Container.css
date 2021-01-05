@@ -1,7 +1,4 @@
-.header {
-
-}
-.header__container {
+.container {
   max-width: 1232px;
   box-sizing: border-box;
   margin: 0 auto;
@@ -10,12 +7,12 @@
 
 
 @media all and (max-width: 768px) {
-  .header__container{
+  .container{
     padding: 0 40px;
   }
 }
 @media all and (max-width: 768px) {
-  .header__container{
+  .container{
     padding: 0 16px;
   }
 }

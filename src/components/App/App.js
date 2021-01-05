@@ -19,6 +19,8 @@ function App() {
   // eslint-disable-next-line no-unused-vars
   const [theme, setTheme] = useState('transparent');
   const [isLoggedIn, setLoggedIn] = useState(false);
+  // eslint-disable-next-line no-unused-vars
+  const [isMenuOpened, setIsMenuOpened] = useState(false);
   const history = useHistory();
 
   const openPopup = (popup) => {
@@ -44,6 +46,7 @@ function App() {
           openPopup={openPopup}
           openedPopup={openedPopup}
           signOut={signOut}
+          isMenuOpened={isMenuOpened}
         />
           {openedPopup && (
           <PopupWithForm
