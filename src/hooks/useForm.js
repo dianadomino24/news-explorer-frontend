@@ -8,14 +8,12 @@ export default function useFormWithValidation() {
   const handleChange = (evt) => {
     const { target } = evt;
     const { name } = target;
-    if (name == 'password') {
+    if (name === 'password') {
       const value = target.value.trim().replace(/\s/g, '');
-      console.log('value', value);
       setValues({ ...values, [name]: value });
       setErrors({ ...errors, [name]: target.validationMessage });
     } else {
       const value = target.value.trim();
-      console.log('value name', value);
       setValues({ ...values, [name]: value });
       setErrors({ ...errors, [name]: target.validationMessage });
     }

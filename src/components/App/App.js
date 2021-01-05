@@ -1,6 +1,6 @@
 import './App.css';
-import React from 'react';
-import { useCallback, useState, useEffect } from 'react';
+import { useState } from 'react';
+// useCallback useEffect
 import {
   Redirect, Route, Switch, useHistory,
 } from 'react-router-dom';
@@ -13,19 +13,27 @@ import PopupWithForm from '../PopupWithForm/PopupWithForm';
 import ProtectedRoute from '../ProtectedRoute/ProtectedRoute';
 
 function App() {
-
-  const [currentUser, setCurrentUser] = useState({ name: '', _id: null});
+  // eslint-disable-next-line no-unused-vars
+  const [currentUser, setCurrentUser] = useState({ name: '', _id: null });
   const [openedPopup, setOpenedPopup] = useState('');
+  // eslint-disable-next-line no-unused-vars
   const [theme, setTheme] = useState('transparent');
   const [isLoggedIn, setLoggedIn] = useState(false);
+  const history = useHistory();
 
-    const openPopup = (popup) => {
+  const openPopup = (popup) => {
     setOpenedPopup(popup);
   };
 
-    const closePopup = () => {
+  const closePopup = () => {
     setOpenedPopup('');
   };
+
+  function signOut() {
+    // removeToken()
+    setLoggedIn(false);
+    history.push('/sign-in');
+  }
 
   return (
     <CurrentUserContext.Provider value={currentUser}>
@@ -43,7 +51,7 @@ function App() {
             openPopup={openPopup}
             closePopup={closePopup}
           />
-        )}
+          )}
       <Switch>
           <ProtectedRoute
             path="/saved-news"
