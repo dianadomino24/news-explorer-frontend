@@ -1,14 +1,14 @@
 import './Main.css';
-// import { useCallback, useState, useEffect } from 'react';
-// import {
-//   Redirect, Route, Switch, useHistory,
-// } from 'react-router-dom';
+import About from '../About/About';
+// import Preloader from '../Preloader/Preloader';
+import Banner from '../Banner/Banner';
 
-function Main() {
+function Main(props) {
   return (
-    <div className="Main">
-      <header className="Main-header"></header>
-    </div>
+    <main className="main">
+      <Banner {...props} />
+      <About />
+    </main>
   );
 }
 

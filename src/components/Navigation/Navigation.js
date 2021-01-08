@@ -12,6 +12,14 @@ function Navigation(theme, isMenuOpened, isLoggedIn,
     scrollToTop();
   };
 
+  const handleNavButtonClick = () => {
+    if (isLoggedIn) signOut();
+    else {
+      toggleNavMenu(false);
+      openPopup('login');
+    }
+  };
+
   return (
     <nav
       className={`navigation navigation_theme_${theme} ${
@@ -45,12 +53,12 @@ function Navigation(theme, isMenuOpened, isLoggedIn,
       </ul>
       <Button
         className={`button navigation__button navigation__button_theme_${theme}`}
-      >
+      onClick={handleNavButtonClick}>
         {isLoggedIn ? (
-          <span className="button__logged-in">
-            <span className="button__title">Greta</span>
+          <span className="navigation__authorized-button">
+            <span className="navigation__authorized-button-title">Greta</span>
             <img
-              className="button__exit-icon"
+              className="navigation__logout-icon"
               src={theme === 'dark' ? logoutIconLight : logoutIconDark}
               alt='Log out'
             />
