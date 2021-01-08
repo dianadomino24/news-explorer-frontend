@@ -6,24 +6,26 @@ import Hamburger from '../Hamburger/Hamburger';
 import Navigation from '../Navigation/Navigation';
 
 function Header(props) {
-  const { theme, openedPopup, isMenuOpened } = props;
-
-  const scrollToTop = () => {
-    window.scrollTo(0, 0);
-  };
+  const {
+    theme, openedPopup, isMenuOpened, scrollToTop,
+  } = props;
 
   return (
-      <header className={`header header_theme_${theme} ${
+    <header
+      className={`header header_theme_dark header_theme_${theme} ${
         isMenuOpened ? '' : 'header_transparent'
-      }`}>
-          <Container>
-            <Link className="header__logo" to="/" onClick={scrollToTop}>
-              <Logo />
-            </Link>
+      }`}
+    >
+      <Container>
+        <div className={'header__container'}>
+          <Link className="header__logo" to="/" onClick={scrollToTop}>
+            <Logo/>
+          </Link>
           {!openedPopup && <Hamburger {...props} />}
           <Navigation {...props} />
-          </Container>
-      </header>
+        </div>
+      </Container>
+    </header>
   );
 }
 

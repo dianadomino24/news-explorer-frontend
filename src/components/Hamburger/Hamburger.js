@@ -6,11 +6,7 @@ import './Hamburger.css';
 // } from 'react-router-dom';
 
 function Hamburger() {
-  return (
-    <div className="hamburger">
-
-    </div>
-  );
+  return <div className="hamburger"></div>;
 }
 
 export default Hamburger;

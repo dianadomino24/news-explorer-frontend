@@ -8,9 +8,7 @@ import React from 'react';
 function SearchForm() {
   return (
     <div className="SearchForm">
-      <header className="SearchForm-header">
-
-      </header>
+      <header className="SearchForm-header"></header>
     </div>
   );
 }

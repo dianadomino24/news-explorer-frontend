@@ -8,9 +8,7 @@ import React from 'react';
 function SavedNews() {
   return (
     <div className="SavedNews">
-      <header className="SavedNews-header">
-
-      </header>
+      <header className="SavedNews-header"></header>
     </div>
   );
 }

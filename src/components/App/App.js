@@ -1,6 +1,5 @@
 import './App.css';
 import { useState } from 'react';
-// useCallback useEffect
 import {
   Redirect, Route, Switch, useHistory,
 } from 'react-router-dom';
@@ -37,25 +36,34 @@ function App() {
     history.push('/sign-in');
   }
 
+  const scrollToTop = () => {
+    window.scrollTo(0, 0);
+  };
+  const toggleNavMenu = (value) => {
+    setIsMenuOpened(value);
+  };
+
   return (
     <CurrentUserContext.Provider value={currentUser}>
       <div className="app">
-          <Header
+        <Header
           theme={theme}
           isLoggedIn={isLoggedIn}
           openPopup={openPopup}
           openedPopup={openedPopup}
           signOut={signOut}
           isMenuOpened={isMenuOpened}
+          scrollToTop={scrollToTop}
+          toggleNavMenu={toggleNavMenu}
         />
-          {openedPopup && (
+        {openedPopup && (
           <PopupWithForm
             openedPopup={openedPopup}
             openPopup={openPopup}
             closePopup={closePopup}
           />
-          )}
-      <Switch>
+        )}
+        <Switch>
           <ProtectedRoute
             path="/saved-news"
             isLoggedIn={isLoggedIn}
@@ -85,11 +93,11 @@ function App() {
           </Route>
 
           <Route path="*">
-            <Redirect to="/" />
+            <Redirect to="/"/>
           </Route>
         </Switch>
 
-        <Footer />
+        <Footer/>
       </div>
     </CurrentUserContext.Provider>
   );

@@ -20,8 +20,4 @@ const apiRoutes = {
   ARTICLES: '/articles',
 };
 
-export {
-  mainApiConfig,
-  newsApiConfig,
-  apiRoutes,
-};
+export { mainApiConfig, newsApiConfig, apiRoutes };

@@ -8,9 +8,7 @@ import './PopupWithForm.css';
 function PopupWithForm() {
   return (
     <div className="PopupWithForm">
-      <header className="PopupWithForm-header">
-
-      </header>
+      <header className="PopupWithForm-header"></header>
     </div>
   );
 }

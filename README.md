@@ -1,18 +1,16 @@
 # Дипломный проект в Яндекс.Практикум Фронтенд
 
-В проекте реализовано приложение на React со следующими возможностями: авторизация и регистрация пользователей, поиск новостей по ключевым словам, сохранение новостей в закладках. 
+В проекте реализовано приложение на React со следующими возможностями: авторизация и регистрация пользователей, поиск новостей по ключевым словам, сохранение новостей в закладках.
 
 ---
 
 **Figma**
 
--   [Ссылка на макет в Figma](https://www.figma.com/file/Dhl21eRzzbFMBe0DU9SglF/Diploma-WEB-v2.0-(for-students))
+- [Ссылка на макет в Figma](<https://www.figma.com/file/Dhl21eRzzbFMBe0DU9SglF/Diploma-WEB-v2.0-(for-students)>)
 
+# Getting Started with Create React Button
 
-
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was bootstrapped with [Create React Button](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
@@ -53,7 +51,7 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 
 ## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+You can learn more in the [Create React Button documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
 
@@ -65,7 +63,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/c
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
+### Making a Progressive Web Button
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 

@@ -7,9 +7,7 @@ import './Footer.css';
 function Footer() {
   return (
     <div className="Footer">
-      <header className="Footer-header">
-
-      </header>
+      <header className="Footer-header"></header>
     </div>
   );
 }

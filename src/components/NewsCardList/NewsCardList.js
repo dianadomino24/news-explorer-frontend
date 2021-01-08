@@ -7,9 +7,7 @@ import './NewsCardList.css';
 function NewsCardList() {
   return (
     <div className="NewsCardList">
-      <header className="NewsCardList-header">
-
-      </header>
+      <header className="NewsCardList-header"></header>
     </div>
   );
 }

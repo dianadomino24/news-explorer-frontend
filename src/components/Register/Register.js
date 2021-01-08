@@ -8,9 +8,7 @@ import React from 'react';
 function Register() {
   return (
     <div className="Register">
-      <header className="Register-header">
-
-      </header>
+      <header className="Register-header"></header>
     </div>
   );
 }

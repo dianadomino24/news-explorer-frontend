@@ -5,12 +5,10 @@ import './App.css';
 //   Redirect, Route, Switch, useHistory,
 // } from 'react-router-dom';
 
-function App() {
+function Button() {
   return (
     <div className="App">
-      <header className="App-header">
-
-      </header>
+      <header className="App-header"></header>
     </div>
   );
 }

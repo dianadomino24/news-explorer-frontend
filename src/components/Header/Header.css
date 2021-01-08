@@ -1,22 +1,45 @@
 .header {
-
+  height: 80px;
+  width: 100%;
+  position: fixed;
+  z-index: 3;
 }
+
+.header_transparent {
+  background-color: transparent;
+}
+
+.header_theme_dark {
+  color: #fff;
+}
+
+.header_theme_light {
+  color: #1A1B22;
+  background-color: #fff;
+}
+
 .header__container {
-  max-width: 1232px;
-  box-sizing: border-box;
-  margin: 0 auto;
-  padding: 0;
+  height: 100%;
+  padding: 0 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
+.header__logo {
+  text-decoration: none;
+  color: inherit;
+}
 
 @media all and (max-width: 768px) {
-  .header__container{
-    padding: 0 40px;
-  }
-}
-@media all and (max-width: 768px) {
-  .header__container{
-    padding: 0 16px;
+  .header {
+    height: 66px;
+
   }
 }
 
+@media all and (max-width: 768px) {
+  .header {
+    height: 56px;
+  }
+}

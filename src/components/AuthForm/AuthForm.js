@@ -7,9 +7,7 @@ import './AuthForm.css';
 function AuthForm() {
   return (
     <div className="AuthForm">
-      <header className="AuthForm-header">
-
-      </header>
+      <header className="AuthForm-header"></header>
     </div>
   );
 }
