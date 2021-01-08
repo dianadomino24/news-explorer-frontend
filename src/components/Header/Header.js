@@ -7,14 +7,14 @@ import Navigation from '../Navigation/Navigation';
 
 function Header(props) {
   const {
-    theme, openedPopup, isMenuOpened, scrollToTop,
+    theme, openedPopup, isNavMenuOpened, scrollToTop,
   } = props;
 
   console.log(theme);
   return (
     <header
       className={`header header_theme_${theme} ${
-        isMenuOpened ? '' : 'header_transparent'
+        isNavMenuOpened ? '' : 'header_transparent'
       }`}
     >
       <Container>

@@ -6,7 +6,7 @@ import logoutIconLight from '../../images/logout-icon-light.svg';
 
 function Navigation(props) {
   const {
-    theme, isMenuOpened, isLoggedIn,
+    theme, isNavMenuOpened, isLoggedIn,
     openPopup,
     signOut, scrollToTop, toggleNavMenu,
   } = props;
@@ -25,7 +25,7 @@ function Navigation(props) {
   return (
     <nav
       className={`navigation navigation_theme_${theme} ${
-        isMenuOpened ? 'navigation_visible' : ''
+        isNavMenuOpened ? 'navigation_visible' : ''
       }`}
     >
       <ul className="navigation__list">

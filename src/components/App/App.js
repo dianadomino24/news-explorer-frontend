@@ -19,7 +19,7 @@ function App() {
   const [theme, setTheme] = useState('dark');
   const [isLoggedIn, setLoggedIn] = useState(false);
   // eslint-disable-next-line no-unused-vars
-  const [isMenuOpened, setIsMenuOpened] = useState(false);
+  const [isNavMenuOpened, setIsNavMenuOpened] = useState(false);
   const history = useHistory();
 
   const openPopup = (popup) => {
@@ -40,7 +40,7 @@ function App() {
     window.scrollTo(0, 0);
   };
   const toggleNavMenu = (value) => {
-    setIsMenuOpened(value);
+    setIsNavMenuOpened(value);
   };
 
   return (
@@ -52,7 +52,7 @@ function App() {
           openPopup={openPopup}
           openedPopup={openedPopup}
           signOut={signOut}
-          isMenuOpened={isMenuOpened}
+          isNavMenuOpened={isNavMenuOpened}
           scrollToTop={scrollToTop}
           toggleNavMenu={toggleNavMenu}
         />
