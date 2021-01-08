@@ -4,9 +4,12 @@ import Button from '../Button/Button';
 import logoutIconDark from '../../images/logout-icon-dark.svg';
 import logoutIconLight from '../../images/logout-icon-light.svg';
 
-function Navigation(theme, isMenuOpened, isLoggedIn,
-  openPopup,
-  signOut, scrollToTop, toggleNavMenu) {
+function Navigation(props) {
+  const {
+    theme, isMenuOpened, isLoggedIn,
+    openPopup,
+    signOut, scrollToTop, toggleNavMenu,
+  } = props;
   const closeNavMenu = () => {
     toggleNavMenu(false);
     scrollToTop();
@@ -19,7 +22,6 @@ function Navigation(theme, isMenuOpened, isLoggedIn,
       openPopup('login');
     }
   };
-
   return (
     <nav
       className={`navigation navigation_theme_${theme} ${
@@ -52,7 +54,7 @@ function Navigation(theme, isMenuOpened, isLoggedIn,
         )}
       </ul>
       <Button
-        className={`button navigation__button navigation__button_theme_${theme}`}
+        buttonClasses={`navigation__button navigation__button_theme_${theme}`}
       onClick={handleNavButtonClick}>
         {isLoggedIn ? (
           <span className="navigation__authorized-button">

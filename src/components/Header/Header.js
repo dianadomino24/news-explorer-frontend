@@ -10,9 +10,10 @@ function Header(props) {
     theme, openedPopup, isMenuOpened, scrollToTop,
   } = props;
 
+  console.log(theme);
   return (
     <header
-      className={`header header_theme_dark header_theme_${theme} ${
+      className={`header header_theme_${theme} ${
         isMenuOpened ? '' : 'header_transparent'
       }`}
     >
