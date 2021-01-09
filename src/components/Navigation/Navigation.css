@@ -4,9 +4,8 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: stretch;
-  opacity: 0;
   transition: all 0.3s ease-in-out;
-  transform: none;
+  /*transform: none;*/
 }
 
 .navigation_theme_dark {
@@ -19,10 +18,7 @@
   border-color: #D1D2D6;
 }
 
-.navigation_visible {
-  opacity: 1;
-  transform: none;
-}
+
 .navigation__list {
   padding: 0;
   margin: 0;
@@ -103,9 +99,10 @@
     left: 0;
     width: 100%;
     margin: 56px 0 0;
-    padding: 16px 16px 24px;
+    padding: 16px 36px 24px;
     box-sizing: border-box;
     height: auto;
+    opacity: 0;
   }
   .navigation::before {
     opacity: 0.5;
@@ -128,4 +125,14 @@
     padding-top: 19px;
   }
 }
+@media all and (max-width: 520px) {
+  .navigation {
+    padding: 16px 16px 24px;
+    transform: translateY(-300px);
+  }
+}
 
+  .navigation_visible {
+  opacity: 1;
+  transform: none;
+}
