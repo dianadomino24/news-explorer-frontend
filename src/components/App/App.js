@@ -17,22 +17,22 @@ function App() {
   const [currentUser, setCurrentUser] = useState({ name: '', _id: null });
   const [openedPopup, setOpenedPopup] = useState('');
   // eslint-disable-next-line no-unused-vars
-  const [theme, setTheme] = useState('dark');
+  const [theme, setTheme] = useState('light');
   const [isLoggedIn, setLoggedIn] = useState(false);
   // eslint-disable-next-line no-unused-vars
-  const [isNavMenuOpened, setIsNavMenuOpened] = useState(false);
+  const [isNavMenuOpened, setIsNavMenuOpened] = useState(true);
   const history = useHistory();
 
   const openPopup = (popup) => {
     setOpenedPopup(popup);
   };
 
-  const toggleMenu = (value) => {
+  const toggleNavMenu = (value) => {
     setIsNavMenuOpened(value);
   };
 
   const closePopup = () => {
-    toggleMenu(false);
+    toggleNavMenu(false);
     setOpenedPopup('');
   };
 
@@ -44,9 +44,6 @@ function App() {
 
   const scrollToTop = () => {
     window.scrollTo(0, 0);
-  };
-  const toggleNavMenu = (value) => {
-    setIsNavMenuOpened(value);
   };
 
   return (

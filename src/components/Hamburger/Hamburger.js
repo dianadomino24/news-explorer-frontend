@@ -1,18 +1,16 @@
 import './Hamburger.css';
 
-function Hamburger({ theme, isNavMenuOpened, toggleMenu }) {
+function Hamburger({ theme, isNavMenuOpened, toggleNavMenu }) {
   const handleHambClick = () => {
-    toggleMenu(!isNavMenuOpened);
+    toggleNavMenu(!isNavMenuOpened);
   };
   return (
-    <div
+    <button
       className={`hamburger hamburger_theme_${theme} ${
-        isNavMenuOpened ? 'hamburger_close' : ''
+        isNavMenuOpened ? 'hamburger_cross' : 'hamburger_bar'
       }`}
       onClick={handleHambClick}
-    >
-      <div className="hamburger__open"></div>
-    </div>
+    ></button>
   );
 }
 

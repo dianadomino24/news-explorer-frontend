@@ -10,7 +10,6 @@ function Header(props) {
     theme, openedPopup, isNavMenuOpened, scrollToTop,
   } = props;
 
-  console.log(theme);
   return (
     <header
       className={`header header_theme_${theme} ${

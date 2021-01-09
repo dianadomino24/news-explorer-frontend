@@ -65,4 +65,7 @@
   .header {
     height: 56px;
   }
+  .header__container {
+    padding: 0;
+  }
 }
