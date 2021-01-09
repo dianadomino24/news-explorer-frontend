@@ -10,6 +10,7 @@ import SavedNews from '../SavedNews/SavedNews';
 import Footer from '../Footer/Footer';
 import PopupWithForm from '../PopupWithForm/PopupWithForm';
 import ProtectedRoute from '../ProtectedRoute/ProtectedRoute';
+import Overlay from '../Overlay/Overlay';
 
 function App() {
   // eslint-disable-next-line no-unused-vars
@@ -26,7 +27,12 @@ function App() {
     setOpenedPopup(popup);
   };
 
+  const toggleMenu = (value) => {
+    setIsNavMenuOpened(value);
+  };
+
   const closePopup = () => {
+    toggleMenu(false);
     setOpenedPopup('');
   };
 
@@ -56,6 +62,7 @@ function App() {
           scrollToTop={scrollToTop}
           toggleNavMenu={toggleNavMenu}
         />
+        {isNavMenuOpened && <Overlay closePopup={closePopup} />}
         {openedPopup && (
           <PopupWithForm
             openedPopup={openedPopup}

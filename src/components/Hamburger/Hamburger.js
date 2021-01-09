@@ -1,12 +1,19 @@
 import './Hamburger.css';
-// import React, { useCallback, useState, useEffect } from 'react';
 
-// import {
-//   Redirect, Route, Switch, useHistory,
-// } from 'react-router-dom';
-
-function Hamburger() {
-  return <div className="hamburger"></div>;
+function Hamburger({ theme, isNavMenuOpened, toggleMenu }) {
+  const handleHambClick = () => {
+    toggleMenu(!isNavMenuOpened);
+  };
+  return (
+    <div
+      className={`hamburger hamburger_theme_${theme} ${
+        isNavMenuOpened ? 'hamburger_close' : ''
+      }`}
+      onClick={handleHambClick}
+    >
+      <div className="hamburger__open"></div>
+    </div>
+  );
 }
 
 export default Hamburger;

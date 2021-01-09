@@ -4,21 +4,11 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: stretch;
-  opacity: 1;
+  opacity: 0;
   transition: all 0.3s ease-in-out;
   transform: none;
 }
-.navigation::before {
-  content: '';
-  opacity: 0;
-  z-index: -1;
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100vh;
-  width: 100%;
-  background: #000000;
-}
+
 .navigation_theme_dark {
   color: #fff;
   border-color: #fff;
