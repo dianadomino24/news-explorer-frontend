@@ -1,7 +1,31 @@
-.App {
+.about {
+ padding: 80px 40px;
+  background-color: #fff;
+  color: #1A1B22;
+  display: flex;
+}
+.about__photo {
+  width: 464px;
+  height: 464px;
+  margin-right: 56px;
+  border-radius: 50%;
+}
+.about__description {
+  max-width: 600px;
+  padding-top: 51px;
 }
 
-@media all and (max-width: 1024px) {
-  .App {
-  }
+.about__title {
+  font-family: Roboto Slab, 'Arial', 'Helvetica', sans-serif;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 1.33;
+}
+
+.about__text {
+  margin-top: 24px;
+  font-size: 18px;
+  font-family: 'Roboto', 'Arial', 'Helvetica', sans-serif;
+  font-weight: 400;
+  line-height: 1.33;
 }
