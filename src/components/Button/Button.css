@@ -16,10 +16,14 @@
   box-shadow: 0px 5px 15px rgba(14, 26, 57, 0.2);
   border: none;
   color: #fff;
-  padding-top: 21px;
-  padding-bottom: 19px;
+  /*padding-top: 21px;*/
+  /*padding-bottom: 19px;*/
   width: 100%;
 }
 .button_type_submit:hover {
   background: #347EFF;
+}
+
+@media all and (max-width: 768px) {
+
 }

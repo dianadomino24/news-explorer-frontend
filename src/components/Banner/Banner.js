@@ -9,10 +9,10 @@ function Banner(props) {
         <div className="banner__container">
           <div className="banner__text">
             <h1 className="banner__title">
-              Что творится в мире?
+              What's going on in the world?
             </h1>
             <p className="banner__description">
-              Находите самые свежие статьи на любую тему и сохраняйте в своём личном кабинете.
+              Find the latest articles on any topic and save them to your bookmarks.
             </p>
           </div>
           <SearchForm {...props} />

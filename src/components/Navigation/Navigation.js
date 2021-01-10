@@ -37,7 +37,7 @@ function Navigation(props) {
             activeClassName="navigation__link_active"
             onClick={closeNavMenu}
           >
-            Главная
+            Home
           </NavLink>
         </li>
         {isLoggedIn && (
@@ -48,7 +48,7 @@ function Navigation(props) {
               activeClassName="navigation__link_active"
               onClick={closeNavMenu}
             >
-              Сохранённые статьи
+              Bookmarks
             </NavLink>
           </li>
         )}
@@ -65,7 +65,7 @@ function Navigation(props) {
               alt='Log out'
             />
           </span>
-        ) : 'Авторизоваться'}
+        ) : 'Login'}
       </Button>
     </nav>
   );

@@ -59,7 +59,7 @@
   }
 
   .banner__container {
-    padding-bottom: 32px;
+    padding: 86px 16px 32px;
   }
 
   .banner__text {
@@ -79,5 +79,4 @@
   .banner {
     background-image: url('../../images/bg-mobile.jpg') ;
   }
-
 }
