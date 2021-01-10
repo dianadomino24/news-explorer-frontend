@@ -101,7 +101,7 @@ function App() {
           </Route>
         </Switch>
 
-        <Footer/>
+        <Footer scrollToTop={scrollToTop}/>
       </div>
     </CurrentUserContext.Provider>
   );
