@@ -2,9 +2,21 @@
   max-width: 1440px;
   box-sizing: border-box;
   margin: 0 auto;
-  padding: 0 80px;
+  padding: 0 104px;
   height: 100%;
 }
+
+@media all and (max-width: 1300px) {
+  .container {
+    padding: 0 80px;
+  }
+}
+@media all and (max-width: 1125px) {
+  .container {
+    padding: 0 50px;
+  }
+}
+
 
 @media all and (max-width: 768px) {
   .container {
