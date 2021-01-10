@@ -4,7 +4,7 @@ import Container from '../Container/Container';
 import gitIcon from '../../images/git.svg';
 import linkedinIcon from '../../images/linked-in.svg';
 
-function Footer(scrollToTop) {
+function Footer(props) {
   return (
     <Container>
       <footer className='footer'>
@@ -15,7 +15,7 @@ function Footer(scrollToTop) {
             <nav className="footer__nav">
             <ul className="footer__nav-list">
               <li className="footer__nav-item">
-                <Link to="/" onClick={scrollToTop} className="footer__nav-link">
+                <Link to="/" onClick={props.scrollToTop} className="footer__nav-link">
                   Home
                 </Link>
               </li>

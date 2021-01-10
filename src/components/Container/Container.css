@@ -24,7 +24,12 @@
   }
 }
 
-@media all and (max-width: 768px) {
+@media all and (max-width: 600px) {
+  .container {
+    padding: 0 25px;
+  }
+}
+@media all and (max-width: 380px) {
   .container {
     padding: 0 16px;
   }
