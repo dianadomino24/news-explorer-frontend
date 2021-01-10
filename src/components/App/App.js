@@ -17,7 +17,7 @@ function App() {
   const [currentUser, setCurrentUser] = useState({ name: '', _id: null });
   const [openedPopup, setOpenedPopup] = useState('');
   // eslint-disable-next-line no-unused-vars
-  const [theme, setTheme] = useState('light');
+  const [theme, setTheme] = useState('dark');
   const [isLoggedIn, setLoggedIn] = useState(false);
   // eslint-disable-next-line no-unused-vars
   const [isNavMenuOpened, setIsNavMenuOpened] = useState(false);
