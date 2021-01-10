@@ -1,15 +1,24 @@
 import './SearchForm.css';
 import React from 'react';
-// import { useCallback, useState, useEffect } from 'react';
-// import {
-//   Redirect, Route, Switch, useHistory,
-// } from 'react-router-dom';
+import Button from '../Button/Button';
 
 function SearchForm() {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+  };
   return (
-    <div className="SearchForm">
-      <header className="SearchForm-header"></header>
-    </div>
+    <form className="search-form" onSubmit={handleSubmit} noValidate>
+      <input
+        type="text"
+        name="search-form"
+        className="search-form__input"
+        placeholder={'Fill in the search keywords'}
+        required
+      />
+      <Button buttonClasses="button_type_text button_type_submit search-form__button" type="submit">
+        Search
+      </Button>
+    </form>
   );
 }
 

@@ -61,14 +61,7 @@
   color: inherit;
   border: 1px solid;
   padding: 12px 19px;
-  box-sizing: border-box;
-  border-radius: 100px;
-  font-family: 'Roboto', 'Arial', 'Helvetica', sans-serif;
-  font-size: 18px;
-  font-weight: 500;
-  line-height: 1.33;
   max-width: 400px;
-  overflow: hidden;
   align-self: center;
 }
 .navigation__button_theme_dark {
@@ -125,7 +118,7 @@
     padding-top: 19px;
   }
 }
-@media all and (max-width: 520px) {
+@media all and (max-width: 550px) {
   .navigation {
     padding: 16px 16px 24px;
     transform: translateY(-300px);

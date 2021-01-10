@@ -2,5 +2,24 @@
   cursor: pointer;
   transition: all 0.3s ease-in-out;
   outline: none;
-
+}
+.button_type_text {
+  box-sizing: border-box;
+  border-radius: 100px;
+  font-family: 'Roboto', 'Arial', 'Helvetica', sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.33;
+}
+.button_type_submit {
+  background: #2F71E5;
+  box-shadow: 0px 5px 15px rgba(14, 26, 57, 0.2);
+  border: none;
+  color: #fff;
+  padding-top: 21px;
+  padding-bottom: 19px;
+  width: 100%;
+}
+.button_type_submit:hover {
+  background: #347EFF;
 }

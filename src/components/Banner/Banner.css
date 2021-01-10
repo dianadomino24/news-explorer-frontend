@@ -1,7 +1,7 @@
 .banner {
   width: 100%;
   height: 576px;
-  background:  url('../../images/bg-desktop.jpg') center  / cover no-repeat;;
+  background:  url('../../images/bg-desktop.jpg') center center / cover no-repeat;;
 }
 .banner__container {
   margin: 0 auto;
@@ -50,12 +50,12 @@
     font-size: 36px;
     line-height: 1.11;
   }
+
 }
 
-@media all and (max-width: 320px) {
+@media all and (max-width: 550px) {
   .banner {
-    height: 536px;
-    background: url('../../images/bg-mobile.jpg') ;
+    height: 100vh;
   }
 
   .banner__container {
@@ -74,4 +74,10 @@
     max-width: 550px;
     margin-top: 32px;
   }
+}
+@media all and (max-width: 420px) {
+  .banner {
+    background-image: url('../../images/bg-mobile.jpg') ;
+  }
+
 }

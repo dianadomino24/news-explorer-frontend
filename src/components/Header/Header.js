@@ -13,9 +13,9 @@ function Header(props) {
   const header = useRef(null);
 
   const blurHeader = useCallback(() => {
-    if (window.scrollY > 80) {
+    if (window.scrollY > 56) {
       header.current.classList.add('header_blurred');
-    } else if (window.scrollY < 80) {
+    } else if (window.scrollY < 56) {
       header.current.classList.remove('header_blurred');
     }
   }, []);
