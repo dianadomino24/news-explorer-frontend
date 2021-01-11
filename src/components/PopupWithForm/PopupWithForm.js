@@ -1,15 +1,50 @@
 import './PopupWithForm.css';
-// import React, { useCallback, useState, useEffect } from 'react';
+import { useEffect, useCallback } from 'react';
+import Login from '../Login/Login';
+import Register from '../Register/Register';
+import RegisterSuccess from '../RegisterSuccess/RegisterSuccess';
 
-// import {
-//   Redirect, Route, Switch, useHistory,
-// } from 'react-router-dom';
+function PopupWithForm({
+  openedPopup, openPopup, closePopup, ...props
+}) {
+  function handleEscClose(e) {
+    if (e.key === 'Escape') {
+      window.removeEventListener('keydown', handleEscClose);
+      closePopup();
+    }
+  }
 
-function PopupWithForm() {
+  function closeByClickingOverlay(e) {
+    if (e.target === e.currentTarget) {
+      window.removeEventListener('keydown', handleEscClose);
+      closePopup();
+    }
+  }
+
+  if (openedPopup) {
+    window.addEventListener('keydown', (evt) => handleEscClose(evt));
+  }
+
   return (
-    <div className="PopupWithForm">
-      <header className="PopupWithForm-header"></header>
-    </div>
+      <section className={`popup ${openedPopup && 'popup_opened'}`} onClick={closeByClickingOverlay}>
+        <div className="popup__container">
+          <button
+            className="button button_type_close"
+            onClick={closePopup}
+          />
+          {openedPopup === 'login' && (
+            <Login {...props }
+            />
+          )}
+          {openedPopup === 'register' && (
+            <Register { ...props }
+            />
+          )}
+          {openedPopup === 'register-success' && (
+            <RegisterSuccess { ...props }/>
+          )}
+        </div>
+      </section>
   );
 }
 

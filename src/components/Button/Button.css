@@ -23,7 +23,24 @@
 .button_type_submit:hover {
   background: #347EFF;
 }
+.button_type_close {
+  position: absolute;
+  top: -47px;
+  right: -47px;
+  background: url('../../images/close-cross.svg') center center no-repeat;
+  padding: 0;
+  width: 40px;
+  height: 40px;
+}
 
-@media all and (max-width: 768px) {
-
+.button_type_close:hover {
+  opacity: 0.7;
+}
+@media all and (max-width: 450px) {
+  .button_type_close {
+    top: -40px;
+    right: 16px;
+    width: 24px;
+    height: 24px;
+  }
 }
