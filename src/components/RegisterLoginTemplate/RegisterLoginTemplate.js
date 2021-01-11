@@ -49,9 +49,9 @@ function AuthForm({
             minLength="2"
             maxLength="80"
           />
-          <span className="register-login__error">{errors.email || ''}</span>
+          <span className="register-login__error">'Адрес электронной почты должен содержать символ "@". В адресе "cf" отсутствует символ "@".'{errors.email || ''}</span>
         </label>
-        <label className="register-login__label" htmlFor="password">
+        <label className="register-login__label">
           Password
 
           <input
@@ -65,39 +65,41 @@ function AuthForm({
             minLength="6"
             maxLength="15"
           />
-          <span className="register-login__error">{errors.password || ''}</span>
+          <span
+            className="register-login__error">'Текст должен быть не короче 6 симв. Длина текста сейчас: 1 символ.'{errors.password || ''}</span>
         </label>
         {type === 'register' && (
-            <label className="register-login__label">
-              Name
-              <input
-                type="text"
-                name="name"
-                value={values.name}
-                onChange={handleFormChange}
-                className="register-login__input"
-                placeholder='Fill in your name'
-                id="register-name"
-                minLength="2"
-                maxLength="30"
-                required
-              />
-              <span className="register-login__error">{errors.name || ''}</span>
-            </label>
+          <label className="register-login__label">
+            Name
+            <input
+              type="text"
+              name="name"
+              value={values.name}
+              onChange={handleFormChange}
+              className="register-login__input"
+              placeholder='Fill in your name'
+              id="register-name"
+              minLength="2"
+              maxLength="30"
+              required
+            />
+            <span
+              className="register-login__error">'Текст должен быть не короче 6 симв. Длина текста сейчас: 1 символ.'{errors.name || ''}</span>
+          </label>
         )}
-        <span className="register-login__error register-login__error_total">
+        <p className="register-login__error-total">
         'ОШИБКА'
-      </span>
+        </p>
         <Button
           type="submit"
-          buttonClass="button_type_text register-login__button"
+          buttonClasses="button_type_text button_type_submit register-login__button"
           disabled={!isValid}
         >
           {buttonName}
         </Button>
       </fieldset>
       <div className="register-login__link-box">
-        or
+        or&nbsp;
         <a
           className="register-login__link popup__link"
           onClick={switchForm}

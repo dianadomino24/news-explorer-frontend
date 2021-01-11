@@ -13,6 +13,7 @@
   opacity: 0;
   transition: visibility 0.4s linear, opacity 0.4s linear;
   background: rgba(0, 0, 0, 0.5);
+  z-index: 6;
 }
 
 .popup__container {
@@ -20,7 +21,7 @@
   max-width: 430px;
   width: 100%;
   background-color: #fff;
-  padding: 34px 36px 36px;
+  padding: 34px 36px 28px;
   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.15);
   border-radius: 16px;
   display: flex;
@@ -47,15 +48,19 @@
   opacity: 0.7;
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 590px) {
+  .popup {
+    top: 56px;
+    height: 100vh;
+  }
   .popup__container {
     padding: 16px;
-    margin-top: 56px;
+    height: 100%;
+    max-width: 500px
   }
 }
 
 .popup_opened {
   visibility: visible;
   opacity: 1;
-  transition: visibility 0.4s linear, opacity 0.4s linear;
 }

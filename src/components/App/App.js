@@ -64,14 +64,14 @@ function App() {
           toggleNavMenu={toggleNavMenu}
         />
         {isNavMenuOpened && <Overlay closePopup={closePopup} />}
-        {openedPopup && (
+
           <PopupWithForm
             openedPopup={openedPopup}
             openPopup={openPopup}
             closePopup={closePopup}
             handleLogin={handleLogin}
           />
-        )}
+
         <Switch>
           <ProtectedRoute
             path="/saved-news"

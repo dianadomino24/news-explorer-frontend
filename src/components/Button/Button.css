@@ -31,12 +31,19 @@
   padding: 0;
   width: 40px;
   height: 40px;
+  border: none;
 }
 
 .button_type_close:hover {
   opacity: 0.7;
 }
-@media all and (max-width: 450px) {
+@media all and (max-width: 1280px) {
+  .button_type_close {
+    top: -35px;
+    right: -35px;
+  }
+}
+@media all and (max-width: 590px) {
   .button_type_close {
     top: -40px;
     right: 16px;
