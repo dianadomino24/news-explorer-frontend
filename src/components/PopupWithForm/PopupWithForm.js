@@ -1,5 +1,5 @@
 import './PopupWithForm.css';
-import { useEffect, useCallback } from 'react';
+// import { useEffect, useCallback } from 'react';
 import Login from '../Login/Login';
 import Register from '../Register/Register';
 import RegisterSuccess from '../RegisterSuccess/RegisterSuccess';
@@ -33,15 +33,15 @@ function PopupWithForm({
             onClick={closePopup}
           />
           {openedPopup === 'login' && (
-            <Login {...props }
+            <Login type={openedPopup} {...props }
             />
           )}
           {openedPopup === 'register' && (
-            <Register { ...props }
+            <Register type={openedPopup} { ...props }
             />
           )}
           {openedPopup === 'register-success' && (
-            <RegisterSuccess { ...props }/>
+            <RegisterSuccess type={openedPopup} {...props }/>
           )}
         </div>
       </section>

@@ -46,6 +46,10 @@ function App() {
     window.scrollTo(0, 0);
   };
 
+  function handleLogin(email, password, resetForm) {
+    console.log(email, password, resetForm);
+  }
+
   return (
     <CurrentUserContext.Provider value={currentUser}>
       <div className="app">
@@ -65,6 +69,7 @@ function App() {
             openedPopup={openedPopup}
             openPopup={openPopup}
             closePopup={closePopup}
+            handleLogin={handleLogin}
           />
         )}
         <Switch>
