@@ -1,5 +1,6 @@
 .news {
   background-color: #F5F6F7;
+  padding: 80px 0;
 }
 
 .news__button-more {
@@ -11,4 +12,11 @@
 
 .news__title {
 
+}
+.news__list {
+  padding: 64px 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 16px;
 }

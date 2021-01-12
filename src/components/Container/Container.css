@@ -6,9 +6,9 @@
   height: 100%;
 }
 
-.container_grey {
-  background-color: #F5F6F7;
-}
+/*.container_grey {*/
+/*  background-color: #F5F6F7;*/
+/*}*/
 
 @media all and (max-width: 1300px) {
   .container {

@@ -4,13 +4,13 @@ import Button from '../Button/Button';
 import NewsCard from '../NewsCard/NewsCard';
 import SectionTitle from '../SectionTitle/SectionTitle';
 
-function News({
+function NewsCardList({
   cards,
   ...props
 }) {
   return (
-    <Container classes='container_grey'>
       <section className="news">
+        <Container >
         <SectionTitle classes='news__title' title='Search results'/>
         <ul className="news__list">
           {cards.map((card) => (
@@ -29,10 +29,10 @@ function News({
             Show more
           </Button>
         )}
-
+        </Container>
       </section>
-    </Container>
+
   );
 }
 
-export default News;
+export default NewsCardList;
