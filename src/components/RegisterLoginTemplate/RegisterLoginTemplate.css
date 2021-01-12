@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: column;
 }
+
 .register-login__fieldset {
   padding: 0;
   margin: 22px 0 16px;
@@ -10,6 +11,7 @@
   font-family: 'Inter', 'Arial', 'Helvetica', sans-serif;
   font-weight: 400;
 }
+
 .register-login__label {
   color: #2F71E5;
   font-size: 12px;
@@ -19,6 +21,7 @@
   margin-bottom: 8px;
   position: relative;
 }
+
 .register-login__input {
   font-size: 14px;
   font-family: 'Inter', 'Arial', 'Helvetica', sans-serif;
@@ -29,12 +32,14 @@
   border-radius: 2px;
   margin-bottom: 31px;
 }
+
 .register-login__input:-webkit-autofill,
 .register-login__input:-webkit-autofill:hover,
 .register-login__input:-webkit-autofill:focus,
 .register-login__input:-webkit-autofill:active {
   -webkit-box-shadow: 0 0 0 30px #fff inset;
 }
+
 .register-login__input::placeholder {
   color: rgba(0, 0, 0, .2);
 }
@@ -89,6 +94,7 @@
   margin: 0;
   padding-top: 16px;
 }
+
 .register-login__link-box {
   font-family: 'Inter', 'Arial', 'Helvetica', sans-serif;
   font-size: 14px;

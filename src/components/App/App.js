@@ -11,6 +11,7 @@ import Footer from '../Footer/Footer';
 import PopupWithForm from '../PopupWithForm/PopupWithForm';
 import ProtectedRoute from '../ProtectedRoute/ProtectedRoute';
 import Overlay from '../Overlay/Overlay';
+import { initialCards } from '../../utils/constants';
 
 function App() {
   // eslint-disable-next-line no-unused-vars
@@ -22,7 +23,8 @@ function App() {
   // eslint-disable-next-line no-unused-vars
   const [isNavMenuOpened, setIsNavMenuOpened] = useState(false);
   const history = useHistory();
-
+  // eslint-disable-next-line no-unused-vars
+  const [cards, setCards] = useState(initialCards);
   const openPopup = (popup) => {
     setOpenedPopup(popup);
   };
@@ -63,14 +65,14 @@ function App() {
           scrollToTop={scrollToTop}
           toggleNavMenu={toggleNavMenu}
         />
-        {isNavMenuOpened && <Overlay closePopup={closePopup} />}
+        {isNavMenuOpened && <Overlay closePopup={closePopup}/>}
 
-          <PopupWithForm
-            openedPopup={openedPopup}
-            openPopup={openPopup}
-            closePopup={closePopup}
-            handleLogin={handleLogin}
-          />
+        <PopupWithForm
+          openedPopup={openedPopup}
+          openPopup={openPopup}
+          closePopup={closePopup}
+          handleLogin={handleLogin}
+        />
 
         <Switch>
           <ProtectedRoute
@@ -93,6 +95,7 @@ function App() {
               // currentData={currentData}
               // setData={setData}
               isLoggedIn={isLoggedIn}
+              cards={cards}
               // searchStatus={searchStatus}
               // setSearch={setSearch}
               // getNews={getNewsFromApi}

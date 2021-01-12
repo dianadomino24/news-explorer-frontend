@@ -34,6 +34,7 @@
     height: 66px;
   }
 }
+
 @media all and (max-width: 765px) {
   .header__container {
     padding: 0 20px;
@@ -44,13 +45,16 @@
   .header {
     height: 56px;
   }
+
   .header__container {
     padding: 0;
   }
 }
+
 .header_transparent {
   background-color: transparent;
 }
+
 .header_blurred {
-  backdrop-filter: blur(5px) invert(0.7) ;
+  backdrop-filter: blur(5px) invert(0.7);
 }

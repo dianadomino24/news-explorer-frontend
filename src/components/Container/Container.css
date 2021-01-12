@@ -6,11 +6,16 @@
   height: 100%;
 }
 
+.container_grey {
+  background-color: #F5F6F7;
+}
+
 @media all and (max-width: 1300px) {
   .container {
     padding: 0 80px;
   }
 }
+
 @media all and (max-width: 1125px) {
   .container {
     padding: 0 50px;
@@ -29,6 +34,7 @@
     padding: 0 25px;
   }
 }
+
 @media all and (max-width: 380px) {
   .container {
     padding: 0 16px;

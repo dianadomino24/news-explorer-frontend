@@ -1,7 +1,7 @@
 import './Container.css';
 
-function Container({ children }) {
-  return <div className="container">{children}</div>;
+function Container({ classes, children }) {
+  return <div className={`container ${classes}`}>{children}</div>;
 }
 
 export default Container;

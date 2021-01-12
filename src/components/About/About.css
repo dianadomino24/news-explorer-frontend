@@ -4,6 +4,7 @@
   color: #1A1B22;
   display: flex;
 }
+
 .about__photo {
   width: 464px;
   height: 464px;
@@ -11,16 +12,10 @@
   border-radius: 50%;
   align-self: center;
 }
+
 .about__description {
   max-width: 600px;
   padding-top: 51px;
-}
-
-.about__title {
-  font-family: Roboto Slab, 'Arial', 'Helvetica', sans-serif;
-  font-weight: 400;
-  font-size: 30px;
-  line-height: 1.33;
 }
 
 .about__text {
@@ -36,34 +31,41 @@
     width: 380px;
     height: 380px;
   }
+
   .about__description {
     padding: 0;
   }
 }
+
 @media all and (max-width: 1125px) {
   .about__photo {
     width: 320px;
     height: 320px;
     margin-right: 32px;
   }
+
   .about__description {
     max-width: 100%;
   }
 }
+
 @media all and (max-width: 1060px) {
   .about__photo {
     width: 232px;
     height: 232px;
   }
+
   .about__text {
     margin-top: 16px;
   }
 }
+
 @media all and (max-width: 765px) {
   .about {
     flex-direction: column;
   }
 }
+
 @media all and (max-width: 420px) {
   .about {
     padding-top: 32px;

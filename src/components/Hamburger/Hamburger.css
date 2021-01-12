@@ -8,15 +8,17 @@
   outline: none;
 }
 
-.hamburger, .hamburger:before, .hamburger:after{
-  transform: translate3d(0,0,0);
+.hamburger, .hamburger:before, .hamburger:after {
+  transform: translate3d(0, 0, 0);
 }
+
 .hamburger, .hamburger::before,
 .hamburger::after {
   content: '';
   height: 2px;
   width: 16px;
 }
+
 .hamburger_theme_dark::before,
 .hamburger_theme_dark::after {
   background-color: #fff;
@@ -26,20 +28,24 @@
 .hamburger_theme_light::after {
   background-color: #1A1B22;
 }
+
 .hamburger::before {
-  transform: translate3d(0, -2.5px,0);
+  transform: translate3d(0, -2.5px, 0);
 }
+
 .hamburger::after {
-  transform: translate3d(0, 2.5px,0);
+  transform: translate3d(0, 2.5px, 0);
 }
+
 .hamburger, .hamburger:before, .hamburger:after {
-   transition: all 320ms ease-in-out;
+  transition: all 320ms ease-in-out;
 }
 
 .hamburger_cross:before {
   transform: rotate3d(0, 0, 1, 45deg) scale3d(1, 1, 1);
   border-radius: 3px;
 }
+
 .hamburger_cross:after {
   transform: rotate3d(0, 0, 1, -45deg) scale3d(1, 1, 1);
   border-radius: 3px;
@@ -50,11 +56,13 @@
     display: block;
     position: relative;
   }
+
   .hamburger::before {
     position: absolute;
     top: 0;
     right: 0;
   }
+
   .hamburger::after {
     position: absolute;
     top: 0;

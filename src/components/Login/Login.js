@@ -12,7 +12,7 @@ function Login({ openPopup, handleLogin, ...props }) {
       handleSubmit={handleLogin}
       buttonName='Log in'
       linkName='Sign up'
-      { ...props }
+      {...props}
     />
   );
 }

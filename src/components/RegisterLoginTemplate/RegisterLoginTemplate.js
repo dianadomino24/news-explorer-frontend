@@ -88,7 +88,7 @@ function AuthForm({
           </label>
         )}
         <p className="register-login__error-total">
-        'ОШИБКА'
+          'ОШИБКА'
         </p>
         <Button
           type="submit"

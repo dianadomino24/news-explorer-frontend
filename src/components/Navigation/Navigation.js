@@ -55,7 +55,7 @@ function Navigation(props) {
       </ul>
       <Button
         buttonClasses={`button_type_text navigation__button navigation__button_theme_${theme}`}
-      onClick={handleNavButtonClick}>
+        onClick={handleNavButtonClick}>
         {isLoggedIn ? (
           <span className="navigation__authorized-button">
             <span className="navigation__authorized-button-title">Greta</span>

@@ -8,4 +8,5 @@ function Ovelay({ closePopup }) {
     ></div>
   );
 }
+
 export default Ovelay;

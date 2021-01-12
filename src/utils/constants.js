@@ -12,4 +12,46 @@ export const texts = {
     + 'and neuropsychology, making pottery and listening to jazz and '
     + 'classical music.',
 };
-export const BASE_URL = 'https://www.api.dianadomino24.students.nomoreparties.space';
+
+export const initialCards = [
+  {
+    _id: 1,
+    keyword: 'Nature',
+    title: 'Национальное достояние – парки',
+    text: 'В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складыв. В 2016 году Америка отначала складыв..',
+    date: '2 августа, 2019',
+    source: 'Лента.ру',
+    link: 'https://lenta.ru/news/2021/01/12/mega/',
+    image: 'https://i0.wp.com/justhelpus.ru/wp-content/uploads/2019/01/Naskolko-polezen-chaj-iz-shalfeya3.jpeg?resize=643%2C429&ssl=1',
+  },
+  {
+    _id: 2,
+    keyword: 'Nature',
+    title: 'Национальное достояние – парки',
+    text: 'В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складыв. В 2016 году Америка отмечала важныначала складыв..',
+    date: '2 августа, 2019',
+    source: 'Лента.ру',
+    link: 'https://lenta.ru/news/2021/01/12/mega/',
+    image: 'https://i0.wp.com/justhelpus.ru/wp-content/uploads/2019/01/Naskolko-polezen-chaj-iz-shalfeya3.jpeg?resize=643%2C429&ssl=1',
+  },
+  {
+    _id: 3,
+    keyword: 'Nature',
+    title: 'Национальное достояние – парки',
+    text: 'В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складыв. В 2016 году Америка отмечала важный юбилей:чала складыв..',
+    date: '2 августа, 2019',
+    source: 'Лента.ру',
+    link: 'https://lenta.ru/news/2021/01/12/mega/',
+    image: 'https://i0.wp.com/justhelpus.ru/wp-content/uploads/2019/01/Naskolko-polezen-chaj-iz-shalfeya3.jpeg?resize=643%2C429&ssl=1',
+  },
+  {
+    _id: 4,
+    keyword: 'Nature',
+    title: 'Национальное достояние – парки',
+    text: 'В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складыв. В 2016 году Америка отмечала важный юбилей:чала складыв..',
+    date: '2 августа, 2019',
+    source: 'Лента.ру',
+    link: 'https://lenta.ru/news/2021/01/12/mega/',
+    image: 'https://i0.wp.com/justhelpus.ru/wp-content/uploads/2019/01/Naskolko-polezen-chaj-iz-shalfeya3.jpeg?resize=643%2C429&ssl=1',
+  },
+];

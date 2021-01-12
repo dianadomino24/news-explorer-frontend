@@ -12,7 +12,7 @@ function Register({ openPopup, handleRegister, ...props }) {
       handleSubmit={handleRegister}
       buttonName='Sign up'
       linkName='Log in'
-      { ...props }
+      {...props}
     />
   );
 }

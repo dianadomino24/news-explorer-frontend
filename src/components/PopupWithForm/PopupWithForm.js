@@ -26,25 +26,25 @@ function PopupWithForm({
   }
 
   return (
-      <section className={`popup ${openedPopup && 'popup_opened'}`} onClick={closeByClickingOverlay}>
-        <div className="popup__container">
-          <button
-            className="button button_type_close"
-            onClick={closePopup}
+    <section className={`popup ${openedPopup && 'popup_opened'}`} onClick={closeByClickingOverlay}>
+      <div className="popup__container">
+        <button
+          className="button button_type_close"
+          onClick={closePopup}
+        />
+        {openedPopup === 'login' && (
+          <Login type={openedPopup} openPopup={openPopup} {...props}
           />
-          {openedPopup === 'login' && (
-            <Login type={openedPopup} openPopup={openPopup} {...props }
-            />
-          )}
-          {openedPopup === 'register' && (
-            <Register type={openedPopup} openPopup={openPopup} { ...props }
-            />
-          )}
-          {openedPopup === 'register-success' && (
-            <RegisterSuccess type={openedPopup} {...props }/>
-          )}
-        </div>
-      </section>
+        )}
+        {openedPopup === 'register' && (
+          <Register type={openedPopup} openPopup={openPopup} {...props}
+          />
+        )}
+        {openedPopup === 'register-success' && (
+          <RegisterSuccess type={openedPopup} {...props}/>
+        )}
+      </div>
+    </section>
   );
 }
 

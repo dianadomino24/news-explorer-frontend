@@ -1,7 +1,14 @@
-.App {
+.news {
+  background-color: #F5F6F7;
 }
 
-@media all and (max-width: 1024px) {
-  .App {
-  }
+.news__button-more {
+  padding-top: 18px;
+  padding-bottom: 21px;
+  max-width: 288px;
+  margin: 0 auto;
+}
+
+.news__title {
+
 }
