@@ -1,15 +1,19 @@
-import './Register.css';
-import React from 'react';
-// import { useCallback, useState, useEffect } from 'react';
-// import {
-//   Redirect, Route, Switch, useHistory,
-// } from 'react-router-dom';
+import RegisterLoginTemplate from '../RegisterLoginTemplate/RegisterLoginTemplate';
 
-function Register() {
+function Register({ openPopup, handleRegister, ...props }) {
+  const switchForm = () => {
+    openPopup('login');
+  };
+
   return (
-    <div className="Register">
-      <header className="Register-header"></header>
-    </div>
+    <RegisterLoginTemplate
+      title='Sign up'
+      switchForm={switchForm}
+      handleSubmit={handleRegister}
+      buttonName='Sign up'
+      linkName='Log in'
+      { ...props }
+    />
   );
 }
 

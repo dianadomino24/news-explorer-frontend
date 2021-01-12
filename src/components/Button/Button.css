@@ -43,11 +43,22 @@
     right: -35px;
   }
 }
+@media all and (max-height: 580px){
+  .button_type_close {
+    top: 20px;
+    right: 20px;
+    width: 24px;
+    height: 24px;
+    background-image: url("../../images/close-cross_black.svg");
+  }
+}
 @media all and (max-width: 590px) {
   .button_type_close {
     top: -40px;
     right: 16px;
     width: 24px;
     height: 24px;
+    background: url('../../images/close-cross.svg') center center no-repeat;
   }
 }
+

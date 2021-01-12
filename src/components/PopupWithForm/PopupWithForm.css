@@ -19,6 +19,7 @@
 .popup__container {
   position: relative;
   max-width: 430px;
+  min-height: 510px;
   width: 100%;
   background-color: #fff;
   padding: 34px 36px 28px;
@@ -47,16 +48,32 @@
 .popup__link:hover {
   opacity: 0.7;
 }
-
-@media screen and (max-width: 590px) {
+@media all and (max-height: 500px) {
   .popup {
-    top: 56px;
+    padding-top: 56px;
     height: 100vh;
+    backdrop-filter: blur(5px) ;
+    overflow-y: auto;
+    align-items: start;
+  }
+  .popup__container {
+    padding: 16px;
+    max-width: 500px;
+  }
+}
+  @media all and (max-width: 590px) {
+  .popup {
+    padding-top: 56px;
+    height: 100vh;
+    backdrop-filter: blur(5px) ;
+    overflow-y: auto;
   }
   .popup__container {
     padding: 16px;
     height: 100%;
-    max-width: 500px
+    max-width: 500px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
   }
 }
 

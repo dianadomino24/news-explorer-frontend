@@ -33,11 +33,11 @@ function PopupWithForm({
             onClick={closePopup}
           />
           {openedPopup === 'login' && (
-            <Login type={openedPopup} {...props }
+            <Login type={openedPopup} openPopup={openPopup} {...props }
             />
           )}
           {openedPopup === 'register' && (
-            <Register type={openedPopup} { ...props }
+            <Register type={openedPopup} openPopup={openPopup} { ...props }
             />
           )}
           {openedPopup === 'register-success' && (
