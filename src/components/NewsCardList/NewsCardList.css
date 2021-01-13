@@ -21,4 +21,26 @@
   grid-auto-rows: 576px;
   grid-gap: 16px;
 }
-
+@media all and (max-width: 1024px) {
+.news__list {
+  grid-auto-rows: 420px;
+  grid-gap: 8px;
+}
+}
+@media all and (max-width: 750px) {
+  .news__list {
+    grid-auto-rows: 446px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media all and (max-width: 600px) {
+  .news__list {
+    grid-template-columns: repeat(1, 1fr);
+    grid-auto-rows: 490px;
+  }
+}
+@media all and (max-width: 330px) {
+  .news__list {
+    grid-auto-rows: 446px;
+  }
+}

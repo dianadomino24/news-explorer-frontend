@@ -44,7 +44,6 @@ function NewsCard({
           src={notFoundImg}
           alt={title}
         /> }
-      )
       <Switch>
         <Route path="/">
           {!isLoggedIn && (
