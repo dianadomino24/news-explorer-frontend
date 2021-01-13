@@ -54,6 +54,37 @@
   width: 100%;
   border: none;
 }
+.button_type_icon {
+  position: absolute;
+  right: 24px;
+  top: 24px;
+  width: 40px;
+  height: 40px;
+  /*display: flex;*/
+  /*justify-content: center;*/
+  /*align-items: center;*/
+  border-radius: 8px;
+  border: none;
+  transition: all .3s ease-in-out;
+}
+.button_type_icon:focus {
+  outline: none;
+}
+.button_type_icon_bookmark_regular {
+  background: url('../../images/bookmark.svg') center center no-repeat, #fff;
+}
+.button_type_icon_bookmark_regular:hover {
+  background: url('../../images/bookmark-hover.svg') center center no-repeat, #fff;
+}
+.button_type_icon_bookmark_saved{
+  background: url('../../images/bookmark-saved.svg') center center no-repeat, #fff;
+}
+.button_type_icon_trash {
+  background: url('../../images/trash-light.svg') center center no-repeat, #fff;
+}
+.button_icon-type_trash:hover {
+  background-image: url('../../images/trash-dark.svg');
+}
 
 @media all and (max-width: 1280px) {
   .button_type_close {
@@ -61,9 +92,16 @@
     right: -35px;
   }
 }
-@media all and (max-width: 768px) {
-  .button_type_more{
-
+@media all and (max-width: 1024px) {
+  .button_type_icon {
+    top: 8px;
+    right: 8px;
+  }
+}
+@media all and (max-width: 750px) {
+  .button_type_icon {
+    top: 16px;
+    right: 16px;
   }
 }
 

@@ -18,7 +18,7 @@ function NewsCard({
     image,
   } = card;
   const cardElement = useRef();
-  // const button = useRef();
+  const button = useRef();
   const infoDetail = useRef();
 
   const showDetail = () => {
@@ -28,10 +28,11 @@ function NewsCard({
     infoDetail.current.classList.remove('info-detail_visible');
   };
 
-  // const handleSave = async () => {
-  //   await saveArticle(card);
-  //   button.current.classList.add('button_type_icon_saved');
-  // };
+  const handleSave = () => {
+    button.current.classList.toggle('button_type_icon_bookmark_saved');
+    // button.current.classList.remove('button_type_icon_bookmark_regular');
+    // button.current.classList.add('button_type_icon_bookmark_saved');
+  };
   return (
     <li className="news-card" ref={cardElement}>
       {image ? <img
@@ -52,11 +53,11 @@ function NewsCard({
             </InfoDetail>
           )}
           <Button
-            // forwardedRef={button}
+            forwardedRef={button}
             onMouseEnter={isLoggedIn ? null : showDetail}
             onMouseLeave={isLoggedIn ? null : hideDetail}
-            buttonClasses="button_type_icon button_type_icon_bookmark"
-            // onClick={isLoggedIn ? handleSave : undefined}
+            buttonClasses="button_type_icon button_type_icon_bookmark_regular"
+            onClick={isLoggedIn ? handleSave : undefined}
           />
         </Route>
         <Route path="/saved-news">
