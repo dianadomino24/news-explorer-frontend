@@ -79,10 +79,11 @@
 .button_type_icon_bookmark_saved{
   background: url('../../images/bookmark-saved.svg') center center no-repeat, #fff;
 }
+
 .button_type_icon_trash {
   background: url('../../images/trash-light.svg') center center no-repeat, #fff;
 }
-.button_icon-type_trash:hover {
+.button_type_icon_trash:hover {
   background-image: url('../../images/trash-dark.svg');
 }
 

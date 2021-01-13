@@ -69,11 +69,11 @@ function NewsCard({
             onMouseEnter={showDetail}
             onMouseLeave={hideDetail}
             // onClick={handleRemove}
-            buttonClass="button button_type_icon button_type_icon_trash"
+            buttonClasses="button button_type_icon button_type_icon_trash"
           />
         </Route>
       </Switch>
-      {keyword && <p className="news-card__keyword">{keyword}</p>}
+
       <div className="news-card__info">
         <a
           href={link}

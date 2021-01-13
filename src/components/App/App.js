@@ -19,7 +19,7 @@ function App() {
   const [openedPopup, setOpenedPopup] = useState('');
   // eslint-disable-next-line no-unused-vars
   const [theme, setTheme] = useState('dark');
-  const [isLoggedIn, setLoggedIn] = useState(false);
+  const [isLoggedIn, setLoggedIn] = useState(true);
   // eslint-disable-next-line no-unused-vars
   const [isNavMenuOpened, setIsNavMenuOpened] = useState(false);
   const history = useHistory();
