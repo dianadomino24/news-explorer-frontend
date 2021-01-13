@@ -19,6 +19,7 @@
 
 .search-form__input:focus {
   outline: none;
+  box-shadow: 0 0 6px #2F71E5, 0 0 10px #fff;
 }
 
 .search-form__button {

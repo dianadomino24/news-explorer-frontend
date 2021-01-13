@@ -3,7 +3,7 @@ import { useRef } from 'react';
 import { Route, Switch } from 'react-router-dom';
 import Button from '../Button/Button';
 import InfoDetail from '../InfoDetail/InfoDetail';
-import notFoundImg from '../../images/not-found-img.svg';
+import notFoundImg from '../../images/not-found-icon.svg';
 
 function NewsCard({
   card, isLoggedIn,
@@ -34,11 +34,16 @@ function NewsCard({
   // };
   return (
     <li className="news-card" ref={cardElement}>
-        <img
-          className="news-card__image"
-          src={image || notFoundImg}
+      {image ? <img
+        className="news-card__image"
+        src={image}
+        alt={title}
+      />
+        : <img
+          className="news-card__image news-card__image_not-found"
+          src={notFoundImg}
           alt={title}
-        />
+        /> }
       )
       <Switch>
         <Route path="/">
@@ -56,7 +61,7 @@ function NewsCard({
           />
         </Route>
         <Route path="/saved-news">
-          {keyword && <p className="news-card__tag">{keyword}</p>}
+          {keyword && <p className="news-card__keyword">{keyword}</p>}
           <InfoDetail classes='' refObj={infoDetail}>
             Remove from bookmarks
           </InfoDetail>
@@ -68,15 +73,14 @@ function NewsCard({
           />
         </Route>
       </Switch>
-
+      {keyword && <p className="news-card__keyword">{keyword}</p>}
       <div className="news-card__info">
         <a
           href={link}
           className="news-card__link"
           target="_blank"
         >
-          <time className="news-card__date" dateTime={date}>
-            12.20.2020 {date}
+          <time className="news-card__date" dateTime={date}>{date}
           </time>
           <h3 className="news-card__title">{title}</h3>
           <p className="news-card__text">{text}</p>
