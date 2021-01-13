@@ -61,6 +61,11 @@
     right: -35px;
   }
 }
+@media all and (max-width: 768px) {
+  .button_type_more{
+
+  }
+}
 
 @media all and (max-height: 580px) {
   .button_type_close {

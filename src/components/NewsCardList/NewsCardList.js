@@ -9,8 +9,8 @@ function NewsCardList({
   ...props
 }) {
   return (
-      <section className="news">
-        <Container >
+    <section className="news">
+      <Container>
         <SectionTitle classes='news__title' title='Search results'/>
         <ul className="news__list">
           {cards.map((card) => (
@@ -29,8 +29,8 @@ function NewsCardList({
             Show more
           </Button>
         )}
-        </Container>
-      </section>
+      </Container>
+    </section>
 
   );
 }
