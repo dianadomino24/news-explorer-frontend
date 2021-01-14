@@ -1,7 +1,3 @@
-.App {
-}
-
-@media all and (max-width: 1024px) {
-  .App {
-  }
+.saved-news {
+  padding-top: 80px;
 }

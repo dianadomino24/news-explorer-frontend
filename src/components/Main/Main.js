@@ -9,6 +9,7 @@ function Main(props) {
     <main className="main">
       <Banner {...props} />
       <NewsCardList
+        type='search'
         {...props}
       >
       </NewsCardList>

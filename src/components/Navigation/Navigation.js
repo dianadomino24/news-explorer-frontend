@@ -8,7 +8,7 @@ function Navigation(props) {
   const {
     theme, isNavMenuOpened, isLoggedIn,
     openPopup,
-    signOut, scrollToTop, toggleNavMenu,
+    signOut, scrollToTop, toggleNavMenu, currentUser,
   } = props;
   const closeNavMenu = () => {
     toggleNavMenu(false);
@@ -34,7 +34,7 @@ function Navigation(props) {
             to="/"
             exact
             className="navigation__link"
-            activeClassName="navigation__link_active"
+            activeClassName={`navigation__link_active_theme_${theme}`}
             onClick={closeNavMenu}
           >
             Home
@@ -45,7 +45,7 @@ function Navigation(props) {
             <NavLink
               to="/saved-news"
               className="navigation__link"
-              activeClassName="navigation__link_active"
+              activeClassName={`navigation__link_active_theme_${theme}`}
               onClick={closeNavMenu}
             >
               Bookmarks
@@ -58,7 +58,7 @@ function Navigation(props) {
         onClick={handleNavButtonClick}>
         {isLoggedIn ? (
           <span className="navigation__authorized-button">
-            <span className="navigation__authorized-button-title">Greta</span>
+            <span className="navigation__authorized-button-title">{currentUser.name}</span>
             <img
               className="navigation__logout-icon"
               src={theme === 'dark' ? logoutIconLight : logoutIconDark}

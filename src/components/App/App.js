@@ -15,7 +15,7 @@ import { initialCards } from '../../utils/constants';
 
 function App() {
   // eslint-disable-next-line no-unused-vars
-  const [currentUser, setCurrentUser] = useState({ name: '', _id: null });
+  const [currentUser, setCurrentUser] = useState({ name: 'Leo', _id: null });
   const [openedPopup, setOpenedPopup] = useState('');
   // eslint-disable-next-line no-unused-vars
   const [theme, setTheme] = useState('dark');
@@ -25,6 +25,11 @@ function App() {
   const history = useHistory();
   // eslint-disable-next-line no-unused-vars
   const [cards, setCards] = useState(initialCards);
+  // eslint-disable-next-line no-unused-vars
+  const [keywords, setKeywords] = useState(['Nature', 'Birds', 'Travel', 'Sea']);
+  // eslint-disable-next-line no-unused-vars
+  const [savedArticles, setSavedArticles] = useState(initialCards);
+
   const openPopup = (popup) => {
     setOpenedPopup(popup);
   };
@@ -64,6 +69,7 @@ function App() {
           isNavMenuOpened={isNavMenuOpened}
           scrollToTop={scrollToTop}
           toggleNavMenu={toggleNavMenu}
+          currentUser={currentUser}
         />
         {isNavMenuOpened && <Overlay closePopup={closePopup}/>}
 
@@ -79,13 +85,9 @@ function App() {
             path="/saved-news"
             isLoggedIn={isLoggedIn}
             component={SavedNews}
-            // setTheme={changeTheme}
-            // savedData={savedData}
-            // getArticles={getArticles}
-            // removeArticle={removeArticle}
-            // keywords={keywords}
-            // setKeywords={setKeywords}
-            // checkCookie={checkCookie}
+            setTheme={setTheme}
+            savedArticles={savedArticles}
+            keywords={keywords}
           />
 
           <Route exact path="/">

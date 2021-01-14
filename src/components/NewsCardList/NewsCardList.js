@@ -5,6 +5,7 @@ import NewsCard from '../NewsCard/NewsCard';
 import SectionTitle from '../SectionTitle/SectionTitle';
 
 function NewsCardList({
+  type,
   cards,
   ...props
 }) {
@@ -21,14 +22,15 @@ function NewsCardList({
             />
           ))}
         </ul>
-        {cards.length > 3 && (
-          <Button
-            buttonClasses="button_type_text button_type_more news__button-more"
-            // onClick={showMore}
-          >
-            Show more
-          </Button>
-        )}
+        {type === 'search' && cards.length > 3 ? (
+            <Button
+              buttonClasses="button_type_text button_type_more news__button-more"
+              // onClick={showMore}
+            >
+              Show more
+            </Button>
+        ) : ''}
+
       </Container>
     </section>
 

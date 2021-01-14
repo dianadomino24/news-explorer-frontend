@@ -1,15 +1,30 @@
 import './SavedNews.css';
-import React from 'react';
-// import { useCallback, useState, useEffect } from 'react';
-// import {
-//   Redirect, Route, Switch, useHistory,
-// } from 'react-router-dom';
+import { useEffect } from 'react';
+import SavedNewsHeader from '../SavedNewsHeader/SavedNewsHeader';
+import NewsCardList from '../NewsCardList/NewsCardList';
 
-function SavedNews() {
+function SavedNews({
+  setTheme,
+  savedArticles,
+  keywords,
+}) {
+  useEffect(() => {
+    setTheme('light');
+    return () => {
+      setTheme('dark');
+    };
+  }, [setTheme]);
+
   return (
-    <div className="SavedNews">
-      <header className="SavedNews-header"></header>
-    </div>
+
+    <section className="saved-news">
+      <SavedNewsHeader
+        savedArticles={savedArticles}
+        keywords={keywords}
+      />
+      <NewsCardList cards={savedArticles} type='bookmarks' />
+    </section>
+
   );
 }
 

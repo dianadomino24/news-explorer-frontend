@@ -46,6 +46,18 @@ function NewsCard({
           alt={title}
         /> }
       <Switch>
+        <Route path="/saved-news">
+          {keyword && <p className="news-card__keyword">{keyword}</p>}
+          <InfoDetail classes='' refObj={infoDetail}>
+            Remove from bookmarks
+          </InfoDetail>
+          <Button
+            onMouseEnter={showDetail}
+            onMouseLeave={hideDetail}
+            // onClick={handleRemove}
+            buttonClasses="button_type_icon button_type_icon_trash "
+          />
+        </Route>
         <Route path="/">
           {!isLoggedIn && (
             <InfoDetail classes='' refObj={infoDetail}>
@@ -58,18 +70,6 @@ function NewsCard({
             onMouseLeave={isLoggedIn ? null : hideDetail}
             buttonClasses="button_type_icon button_type_icon_bookmark_regular"
             onClick={isLoggedIn ? handleSave : undefined}
-          />
-        </Route>
-        <Route path="/saved-news">
-          {keyword && <p className="news-card__keyword">{keyword}</p>}
-          <InfoDetail classes='' refObj={infoDetail}>
-            Remove from bookmarks
-          </InfoDetail>
-          <Button
-            onMouseEnter={showDetail}
-            onMouseLeave={hideDetail}
-            // onClick={handleRemove}
-            buttonClasses="button button_type_icon button_type_icon_trash"
           />
         </Route>
       </Switch>
