@@ -10,7 +10,7 @@ function SavedNewsHeader({ savedArticles, keywords }) {
   return (
     <Container>
     <div className="saved-news-header">
-      <p className="saved-news-header__heading">'Bookmarks</p>
+      <p className="saved-news-header__heading">Bookmarks</p>
       <SectionTitle
         classes="saved-news-header__title"
         title={
@@ -19,11 +19,11 @@ function SavedNewsHeader({ savedArticles, keywords }) {
           } saved articles `
         }
       />
-      <p className="saved-news-header__keywords-text">
-        {'on these keywords:&nbsp'}
+      <p className="saved-news-header__keywords-para">
+        {'on these keywords: '}
         {keywords[0] && (<span className="saved-news-header__keyword">{keywords[0]}</span>)}
         {keywords[1] && (<>, <span className="saved-news-header__keyword">{keywords[1]}</span></>)}
-        {keywords[2] && (<> и <span className="saved-news-header__keyword">{keywords[2]}</span></>)}
+        {keywords[2] && (<> and <span className="saved-news-header__keyword">{keywords[2]}</span></>)}
       </p>
     </div>
     </Container>
