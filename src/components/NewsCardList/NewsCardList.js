@@ -23,12 +23,12 @@ function NewsCardList({
           ))}
         </ul>
         {type === 'search' && cards.length > 3 ? (
-            <Button
-              buttonClasses="button_type_text button_type_more news__button-more"
-              // onClick={showMore}
-            >
-              Show more
-            </Button>
+          <Button
+            buttonClasses="button_type_text button_type_more news__button-more"
+            // onClick={showMore}
+          >
+            Show more
+          </Button>
         ) : ''}
 
       </Container>

@@ -26,9 +26,11 @@
     grid-gap: 8px;
     padding: 32px 0;
   }
+
   .news {
     padding: 40px 0;
   }
+
   .news__button-more {
     max-width: 240px;
     padding-top: 15px;
@@ -50,9 +52,11 @@
     padding: 24px 0 16px;
     grid-gap: 10px;
   }
+
   .news {
     padding: 32px 0;
   }
+
   .news__button-more {
     max-width: 100%;
   }

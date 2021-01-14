@@ -36,9 +36,9 @@
 }
 
 @media all and (max-width: 765px) {
-  .header__container {
-    padding: 0 20px;
-  }
+  /*.header__container {*/
+  /*  padding: 0 20px;*/
+  /*}*/
 }
 
 @media all and (max-width: 550px) {

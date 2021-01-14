@@ -29,6 +29,8 @@ function App() {
   const [keywords, setKeywords] = useState(['Nature', 'Birds', 'Travel', 'Sea']);
   // eslint-disable-next-line no-unused-vars
   const [savedArticles, setSavedArticles] = useState(initialCards);
+  // eslint-disable-next-line no-unused-vars
+  const [notFound, setNotFound] = useState(true);
 
   const openPopup = (popup) => {
     setOpenedPopup(popup);
@@ -92,17 +94,9 @@ function App() {
 
           <Route exact path="/">
             <Main
-              // newsData={newsData}
-              // setNews={setNews}
-              // currentData={currentData}
-              // setData={setData}
               isLoggedIn={isLoggedIn}
               cards={cards}
-              // searchStatus={searchStatus}
-              // setSearch={setSearch}
-              // getNews={getNewsFromApi}
-              // saveArticle={saveArticle}
-              // removeFromStorage={removeFromStorage}
+              notFound={notFound}
             />
           </Route>
 

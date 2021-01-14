@@ -36,15 +36,15 @@ function NewsCard({
   return (
     <li className="news-card" ref={cardElement}>
       {image ? <img
-        className="news-card__image"
-        src={image}
-        alt={title}
-      />
+          className="news-card__image"
+          src={image}
+          alt={title}
+        />
         : <img
           className="news-card__image news-card__image_not-found"
           src={notFoundImg}
           alt={title}
-        /> }
+        />}
       <Switch>
         <Route path="/saved-news">
           {keyword && <p className="news-card__keyword">{keyword}</p>}

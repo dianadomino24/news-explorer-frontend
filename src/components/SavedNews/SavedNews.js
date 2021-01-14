@@ -22,7 +22,7 @@ function SavedNews({
         savedArticles={savedArticles}
         keywords={keywords}
       />
-      <NewsCardList cards={savedArticles} type='bookmarks' />
+      <NewsCardList cards={savedArticles} type='bookmarks'/>
     </section>
 
   );
