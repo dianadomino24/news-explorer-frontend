@@ -30,7 +30,7 @@ function App() {
   // eslint-disable-next-line no-unused-vars
   const [savedArticles, setSavedArticles] = useState(initialCards);
   // eslint-disable-next-line no-unused-vars
-  const [notFound, setNotFound] = useState(true);
+  const [searchResults, setSearchResults] = useState('');
 
   const openPopup = (popup) => {
     setOpenedPopup(popup);
@@ -96,7 +96,7 @@ function App() {
             <Main
               isLoggedIn={isLoggedIn}
               cards={cards}
-              notFound={notFound}
+              searchResults={searchResults}
             />
           </Route>
 
