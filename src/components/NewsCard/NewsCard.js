@@ -29,9 +29,8 @@ function NewsCard({
   };
 
   const handleSave = () => {
+    button.current.blur();
     button.current.classList.toggle('button_type_icon_bookmark_saved');
-    // button.current.classList.remove('button_type_icon_bookmark_regular');
-    // button.current.classList.add('button_type_icon_bookmark_saved');
   };
   return (
     <li className="news-card" ref={cardElement}>

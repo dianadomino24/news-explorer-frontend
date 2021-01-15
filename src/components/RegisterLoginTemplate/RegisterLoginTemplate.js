@@ -10,27 +10,29 @@ function AuthForm({
   buttonName,
   linkName,
   handleSubmit,
+  errorTotal,
 }) {
   const {
     values,
     handleChange,
     errors,
-    isValid,
     resetForm,
+    isValid,
   } = useForm();
 
   const handleFormChange = (e) => {
     handleChange(e);
     // onChange(e);
   };
-
-  const onSubmit = (e) => {
-    handleSubmit(e, resetForm);
-  };
-
   useEffect(() => {
     resetForm();
   }, [resetForm]);
+
+  const onSubmit = (e) => {
+    e.preventDefault();
+    const { email, password, name } = values;
+    handleSubmit(email, password, resetForm, name);
+  };
 
   return (
     <form className="register-login" onSubmit={onSubmit}>
@@ -49,7 +51,9 @@ function AuthForm({
             minLength="2"
             maxLength="80"
           />
-          <span className="register-login__error">'Адрес электронной почты должен содержать символ "@". В адресе "cf" отсутствует символ "@".'{errors.email || ''}</span>
+          <span className="register-login__error">'Адрес должен содержать специальный символАдрес
+            должен содержать специальный символ "@", который отделяет имя пользователя
+            "@", который отделяет имя пользователя Адрес должен' {errors.email || ''}</span>
         </label>
         <label className="register-login__label">
           Password
@@ -66,7 +70,9 @@ function AuthForm({
             maxLength="15"
           />
           <span
-            className="register-login__error">'Текст должен быть не короче 6 симв. Длина текста сейчас: 1 символ.'{errors.password || ''}</span>
+            className="register-login__error">'Адрес должен содержать специальный символАдрес
+            должен содержать специальный символ "@", который отделяет имя пользователя
+            "@", который отделяет имя пользователя Адрес должен'{errors.password || ''}</span>
         </label>
         {type === 'register' && (
           <label className="register-login__label">
@@ -84,11 +90,13 @@ function AuthForm({
               required
             />
             <span
-              className="register-login__error">'Текст должен быть не короче 6 симв. Длина текста сейчас: 1 символ.'{errors.name || ''}</span>
+              className="register-login__error">'Адрес должен содержать специальный символАдрес
+            должен содержать специальный символ "@", который отделяет имя пользователя
+            "@", который отделяет имя пользователя Адрес должен'{errors.name || ''}</span>
           </label>
         )}
         <p className="register-login__error-total">
-          'ОШИБКА'
+          'Адрес должен содержать '{errorTotal}
         </p>
         <Button
           type="submit"

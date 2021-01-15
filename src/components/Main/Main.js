@@ -10,6 +10,13 @@ function Main({ searchResults, ...props }) {
   return (
     <main className="main">
       <Banner {...props} />
+      <Preloader/>
+      <NotFound/>
+      <NewsCardList
+        type='search'
+        {...props}
+      >
+      </NewsCardList>
        {searchResults === 'searching' && <Preloader/>}
        {searchResults === 'notFound' && <NotFound/>}
        {searchResults === 'found' && (

@@ -41,7 +41,7 @@ function PopupWithForm({
           />
         )}
         {openedPopup === 'register-success' && (
-          <RegisterSuccess type={openedPopup} {...props}/>
+          <RegisterSuccess type={openedPopup} openPopup={openPopup} {...props}/>
         )}
       </div>
     </section>

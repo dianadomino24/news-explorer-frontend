@@ -14,12 +14,14 @@ import Overlay from '../Overlay/Overlay';
 import { initialCards } from '../../utils/constants';
 
 function App() {
+  // здесь и ниже в стейтах выключаю линтер, чтобы не ругался на
+  // неиспользуемые пока переменные (временная мера)
   // eslint-disable-next-line no-unused-vars
   const [currentUser, setCurrentUser] = useState({ name: 'Leo', _id: null });
   const [openedPopup, setOpenedPopup] = useState('');
   // eslint-disable-next-line no-unused-vars
   const [theme, setTheme] = useState('dark');
-  const [isLoggedIn, setLoggedIn] = useState(true);
+  const [isLoggedIn, setLoggedIn] = useState(false);
   // eslint-disable-next-line no-unused-vars
   const [isNavMenuOpened, setIsNavMenuOpened] = useState(false);
   const history = useHistory();
@@ -31,6 +33,8 @@ function App() {
   const [savedArticles, setSavedArticles] = useState(initialCards);
   // eslint-disable-next-line no-unused-vars
   const [searchResults, setSearchResults] = useState('');
+  // eslint-disable-next-line no-unused-vars
+  const [errorTotal, setErrorTotal] = useState('');
 
   const openPopup = (popup) => {
     setOpenedPopup(popup);
@@ -46,7 +50,6 @@ function App() {
   };
 
   function signOut() {
-    // removeToken()
     setLoggedIn(false);
     history.push('/sign-in');
   }
@@ -55,9 +58,20 @@ function App() {
     window.scrollTo(0, 0);
   };
 
-  function handleLogin(email, password, resetForm) {
-    console.log(email, password, resetForm);
-  }
+  const handleLogin = (email, password, resetForm) => {
+    resetForm();
+    setLoggedIn(true);
+    setOpenedPopup('');
+    // eslint-disable-next-line no-console
+    console.log(email, password);
+  };
+  const handleRegister = (email, password, resetForm, name) => {
+    resetForm();
+    setOpenedPopup('register-success');
+    // выключаю линтер, чтобы не ругался на неиспользуемые пока переменные (временная мера)
+    // eslint-disable-next-line no-console
+    console.log(email, password, name);
+  };
 
   return (
     <CurrentUserContext.Provider value={currentUser}>
@@ -80,6 +94,8 @@ function App() {
           openPopup={openPopup}
           closePopup={closePopup}
           handleLogin={handleLogin}
+          handleRegister={handleRegister}
+          errorTotal={errorTotal}
         />
 
         <Switch>
