@@ -1,5 +1,4 @@
 import './PopupWithForm.css';
-// import { useEffect, useCallback } from 'react';
 import Login from '../Login/Login';
 import Register from '../Register/Register';
 import RegisterSuccess from '../RegisterSuccess/RegisterSuccess';

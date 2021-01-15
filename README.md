@@ -1,80 +1,88 @@
-# Дипломный проект в Яндекс.Практикум Фронтенд
+# :large_blue_diamond: Diploma project at Practicum by Yandex - frontend
 
-В проекте реализовано приложение на React со следующими возможностями: авторизация и регистрация пользователей, поиск новостей по ключевым словам, сохранение новостей в закладках.
+:small_blue_diamond: Frontend part of a React application with these **functions**:
+* registration,
+* authorization,
+* searching news by keywords,
+* adding/deleting articles to favorites list;
+---
+## :mag_right: Preview
+
+[comment]: <> (![Preview]&#40;./Example3.png&#41;)
+---
+## :link: Links to test
+
+
+---
+## :arrow_down: How to install and test
+
+1. Clone the repository:
+
+```
+git clone https://github.com/dianadomino24/news-explorer-frontend.git
+```
+
+2. Install dependencies:
+
+```
+npm install
+```
+
+3. Development mode:
+   
+Builds the app for production to the `build` folder.\
+```
+      npm run build
+```
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+```
+      npm run start
+```
+
+
+## :rocket: Technologies
+
+* **JavaScript ES6** - object-oriented programming, fetch API,
+
+
+* semantic **HTML5**, styles - **CSS3** including Flexbox, Grid, adaptive layout,
+* **jsx**,
+* **BEM** methodology,
+
+
+* **React.js** - functional and class components, Context, Ref, Redirect, Route, Switch functions,
+* **React hooks** - useState, useEffect, useContext, useRef, useCallback, useHistory,
+* **Create React App** build,
+
+
+* **Node.js**, **Express.js** - API based on **REST** principles for working with the database, authentication/authorization,
+* **MongoDb**, **Mongoose** - schema, CRUD operations,
+* Yandex.Cloud service **Virtual Machine**,
+
+
+* Client-side and user-side validation of data including  **validator** and **joi/celebrate** modules, jwt-token,
+* **BodyParser**, **DotENV**, **bCrypt**, **Nodemon**,
+* Access and error logs are maintained using the **winston** module,
+* **Centralized error handling** with sending correct statuses and error messages to requests,
+* Working with files/API requests is divided between the Node and **Nginx** servers,
+
+
+* **ESLint airbnb-base**,
+* **Figma**, **Pixel perfect**,
+
+
+* **Git** versions, branches.
 
 ---
 
+**Practicum by Yandex** - https://practicum.yandex.com/
+
+---
 **Figma**
 
-- [Ссылка на макет в Figma](<https://www.figma.com/file/Dhl21eRzzbFMBe0DU9SglF/Diploma-WEB-v2.0-(for-students)>)
+- [Figma Layout](<https://www.figma.com/file/Dhl21eRzzbFMBe0DU9SglF/Diploma-WEB-v2.0-(for-students)>)
+---
 
-# Getting Started with Create React Button
+## :sparkles: Thanks for watching! 
 
-This project was bootstrapped with [Create React Button](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React Button documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web Button
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

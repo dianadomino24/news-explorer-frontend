@@ -6,14 +6,14 @@ function Login({ openPopup, handleLogin, ...props }) {
   };
 
   return (
-    <RegisterLoginTemplate
-      title='Login'
-      switchForm={switchForm}
-      handleSubmit={handleLogin}
-      buttonName='Log in'
-      linkName='Sign up'
-      {...props}
-    />
+        <RegisterLoginTemplate
+            title='Login'
+            switchForm={switchForm}
+            handleSubmit={handleLogin}
+            buttonName='Log in'
+            linkName='Sign up'
+            {...props}
+        />
   );
 }
 

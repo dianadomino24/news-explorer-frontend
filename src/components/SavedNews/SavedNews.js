@@ -17,13 +17,13 @@ function SavedNews({
 
   return (
 
-    <section className="saved-news">
-      <SavedNewsHeader
-        savedArticles={savedArticles}
-        keywords={keywords}
-      />
-      <NewsCardList cards={savedArticles} type='bookmarks'/>
-    </section>
+        <section className="saved-news">
+            <SavedNewsHeader
+                savedArticles={savedArticles}
+                keywords={keywords}
+            />
+            <NewsCardList cards={savedArticles} type='bookmarks'/>
+        </section>
 
   );
 }

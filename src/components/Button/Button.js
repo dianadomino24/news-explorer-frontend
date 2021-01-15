@@ -1,3 +1,4 @@
+import React from 'react';
 import './Button.css';
 
 function Button({
@@ -10,16 +11,16 @@ function Button({
   buttonClasses,
 }) {
   return (
-    <button
-      className={`button ${buttonClasses}`}
-      ref={forwardedRef}
-      onClick={onClick}
-      onMouseEnter={onMouseEnter}
-      onMouseLeave={onMouseLeave}
-      disabled={disabled}
-    >
-      {children}
-    </button>
+        <button
+            className={`button ${buttonClasses}`}
+            ref={forwardedRef}
+            onClick={onClick}
+            onMouseEnter={onMouseEnter}
+            onMouseLeave={onMouseLeave}
+            disabled={disabled}
+        >
+            {children}
+        </button>
   );
 }
 

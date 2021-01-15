@@ -23,51 +23,51 @@ function Navigation(props) {
     }
   };
   return (
-    <nav
-      className={`navigation navigation_theme_${theme} ${
-        isNavMenuOpened ? 'navigation_visible' : ''
-      }`}
-    >
-      <ul className="navigation__list">
-        <li className="navigation__item">
-          <NavLink
-            to="/"
-            exact
-            className="navigation__link"
-            activeClassName={`navigation__link_active_theme_${theme}`}
-            onClick={closeNavMenu}
-          >
-            Home
-          </NavLink>
-        </li>
-        {isLoggedIn && (
-          <li className="navigation__item">
-            <NavLink
-              to="/saved-news"
-              className="navigation__link"
-              activeClassName={`navigation__link_active_theme_${theme}`}
-              onClick={closeNavMenu}
-            >
-              Bookmarks
-            </NavLink>
-          </li>
-        )}
-      </ul>
-      <Button
-        buttonClasses={`button_type_text navigation__button navigation__button_theme_${theme}`}
-        onClick={handleNavButtonClick}>
-        {isLoggedIn ? (
-          <span className="navigation__authorized-button">
+        <nav
+            className={`navigation navigation_theme_${theme} ${
+              isNavMenuOpened ? 'navigation_visible' : ''
+            }`}
+        >
+            <ul className="navigation__list">
+                <li className="navigation__item">
+                    <NavLink
+                        to="/"
+                        exact
+                        className="navigation__link"
+                        activeClassName={`navigation__link_active_theme_${theme}`}
+                        onClick={closeNavMenu}
+                    >
+                        Home
+                    </NavLink>
+                </li>
+                {isLoggedIn && (
+                    <li className="navigation__item">
+                        <NavLink
+                            to="/saved-news"
+                            className="navigation__link"
+                            activeClassName={`navigation__link_active_theme_${theme}`}
+                            onClick={closeNavMenu}
+                        >
+                            Bookmarks
+                        </NavLink>
+                    </li>
+                )}
+            </ul>
+            <Button
+                buttonClasses={`button_type_text navigation__button navigation__button_theme_${theme}`}
+                onClick={handleNavButtonClick}>
+                {isLoggedIn ? (
+                    <span className="navigation__authorized-button">
             <span className="navigation__authorized-button-title">{currentUser.name}</span>
             <img
-              className="navigation__logout-icon"
-              src={theme === 'dark' ? logoutIconLight : logoutIconDark}
-              alt='Log out'
+                className="navigation__logout-icon"
+                src={theme === 'dark' ? logoutIconLight : logoutIconDark}
+                alt='Log out'
             />
           </span>
-        ) : 'Login'}
-      </Button>
-    </nav>
+                ) : 'Login'}
+            </Button>
+        </nav>
   );
 }
 

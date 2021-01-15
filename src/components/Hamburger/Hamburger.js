@@ -5,12 +5,12 @@ function Hamburger({ theme, isNavMenuOpened, toggleNavMenu }) {
     toggleNavMenu(!isNavMenuOpened);
   };
   return (
-    <button
-      className={`hamburger hamburger_theme_${theme} ${
-        isNavMenuOpened ? 'hamburger_cross' : 'hamburger_bar'
-      }`}
-      onClick={handleHambClick}
-    ></button>
+        <button
+            className={`hamburger hamburger_theme_${theme} ${
+              isNavMenuOpened ? 'hamburger_cross' : 'hamburger_bar'
+            }`}
+            onClick={handleHambClick}
+        />
   );
 }
 

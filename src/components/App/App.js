@@ -17,7 +17,9 @@ function App() {
   // здесь и ниже в стейтах выключаю линтер, чтобы не ругался на
   // неиспользуемые пока переменные (временная мера)
   // eslint-disable-next-line no-unused-vars
-  const [currentUser, setCurrentUser] = useState({ name: 'Leo', _id: null });
+  const [currentUser, setCurrentUser] = useState({
+    name: 'Leo', _id: null, email: '', password: '',
+  });
   const [openedPopup, setOpenedPopup] = useState('');
   // eslint-disable-next-line no-unused-vars
   const [theme, setTheme] = useState('dark');
@@ -32,7 +34,7 @@ function App() {
   // eslint-disable-next-line no-unused-vars
   const [savedArticles, setSavedArticles] = useState(initialCards);
   // eslint-disable-next-line no-unused-vars
-  const [searchResults, setSearchResults] = useState('');
+  const [searchState, setSearchState] = useState('');
   // eslint-disable-next-line no-unused-vars
   const [errorTotal, setErrorTotal] = useState('');
 
@@ -72,58 +74,65 @@ function App() {
     // eslint-disable-next-line no-console
     console.log(email, password, name);
   };
+  const setUser = (evt) => {
+    const { target } = evt;
+    const { name, value } = target;
+    setCurrentUser((prevUser) => ({ ...prevUser, [name]: value }));
+  };
 
   return (
-    <CurrentUserContext.Provider value={currentUser}>
-      <div className="app">
-        <Header
-          theme={theme}
-          isLoggedIn={isLoggedIn}
-          openPopup={openPopup}
-          openedPopup={openedPopup}
-          signOut={signOut}
-          isNavMenuOpened={isNavMenuOpened}
-          scrollToTop={scrollToTop}
-          toggleNavMenu={toggleNavMenu}
-          currentUser={currentUser}
-        />
-        {isNavMenuOpened && <Overlay closePopup={closePopup}/>}
+        <CurrentUserContext.Provider value={currentUser}>
+            <div className="app">
+                <Header
+                    theme={theme}
+                    isLoggedIn={isLoggedIn}
+                    openPopup={openPopup}
+                    openedPopup={openedPopup}
+                    signOut={signOut}
+                    isNavMenuOpened={isNavMenuOpened}
+                    scrollToTop={scrollToTop}
+                    toggleNavMenu={toggleNavMenu}
+                    currentUser={currentUser}
+                />
+                {isNavMenuOpened && <Overlay closePopup={closePopup}/>}
 
-        <PopupWithForm
-          openedPopup={openedPopup}
-          openPopup={openPopup}
-          closePopup={closePopup}
-          handleLogin={handleLogin}
-          handleRegister={handleRegister}
-          errorTotal={errorTotal}
-        />
+                <PopupWithForm
+                    openedPopup={openedPopup}
+                    openPopup={openPopup}
+                    closePopup={closePopup}
+                    handleLogin={handleLogin}
+                    handleRegister={handleRegister}
+                    errorTotal={errorTotal}
+                    onChange={setUser}
+                />
 
-        <Switch>
-          <ProtectedRoute
-            path="/saved-news"
-            isLoggedIn={isLoggedIn}
-            component={SavedNews}
-            setTheme={setTheme}
-            savedArticles={savedArticles}
-            keywords={keywords}
-          />
+                <Switch>
+                    <ProtectedRoute
+                        path="/saved-news"
+                        isLoggedIn={isLoggedIn}
+                        component={SavedNews}
+                        setTheme={setTheme}
+                        savedArticles={savedArticles}
+                        keywords={keywords}
+                    />
 
-          <Route exact path="/">
-            <Main
-              isLoggedIn={isLoggedIn}
-              cards={cards}
-              searchResults={searchResults}
-            />
-          </Route>
+                    <Route exact path="/">
+                        <Main
+                            isLoggedIn={isLoggedIn}
+                            cards={cards}
+                            searchState={searchState}
+                            setSearchState={setSearchState}
+                        />
+                    </Route>
 
-          <Route path="*">
-            <Redirect to="/"/>
-          </Route>
-        </Switch>
+                    <Route path="*">
+                        <Redirect to="/"/>
+                    </Route>
+                </Switch>
 
-        <Footer scrollToTop={scrollToTop}/>
-      </div>
-    </CurrentUserContext.Provider>
+                <Footer scrollToTop={scrollToTop}/>
+            </div>
+        </CurrentUserContext.Provider>
   );
 }
 

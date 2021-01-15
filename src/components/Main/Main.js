@@ -1,33 +1,25 @@
 import './Main.css';
 import About from '../About/About';
-// import Preloader from '../Preloader/Preloader';
 import Banner from '../Banner/Banner';
 import NewsCardList from '../NewsCardList/NewsCardList';
 import NotFound from '../NotFound/NotFound';
 import Preloader from '../Preloader/Preloader';
 
-function Main({ searchResults, ...props }) {
+function Main({ searchState, ...props }) {
   return (
-    <main className="main">
-      <Banner {...props} />
-      <Preloader/>
-      <NotFound/>
-      <NewsCardList
-        type='search'
-        {...props}
-      >
-      </NewsCardList>
-      {searchResults === 'searching' && <Preloader/>}
-      {searchResults === 'notFound' && <NotFound/>}
-      {searchResults === 'found' && (
-        <NewsCardList
-          type='search'
-          {...props}
-        >
-        </NewsCardList>
-      )}
-      <About/>
-    </main>
+        <main className="main">
+            <Banner {...props} />
+            {searchState === 'searching' && <Preloader/>}
+            {searchState === 'notFound' && <NotFound/>}
+            {searchState === 'found' && (
+                <NewsCardList
+                    type='search'
+                    {...props}
+                >
+                </NewsCardList>
+            )}
+            <About/>
+        </main>
   );
 }
 

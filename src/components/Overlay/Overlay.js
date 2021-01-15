@@ -1,12 +1,12 @@
 import './Overlay.css';
 
-function Ovelay({ closePopup }) {
+function Overlay({ closePopup }) {
   return (
-    <div
-      className="overlay"
-      onClick={closePopup}
-    ></div>
+        <div
+            className="overlay"
+            onClick={closePopup}
+        />
   );
 }
 
-export default Ovelay;
+export default Overlay;
