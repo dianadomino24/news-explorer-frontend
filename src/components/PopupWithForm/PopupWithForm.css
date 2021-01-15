@@ -66,6 +66,7 @@
     border-bottom-left-radius: 0;
   }
 }
+
 @media all and (max-height: 520px) {
   .popup {
     padding-top: 56px;
@@ -81,6 +82,7 @@
     height: auto;
   }
 }
+
 .popup_opened {
   visibility: visible;
   opacity: 1;

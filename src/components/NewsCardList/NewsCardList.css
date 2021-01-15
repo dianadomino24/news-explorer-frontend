@@ -1,6 +1,9 @@
 .news {
   background-color: #F5F6F7;
-  padding: 80px 0;
+}
+
+.news__title {
+  margin-top: 80px;
 }
 
 .news__button-more {
@@ -8,6 +11,7 @@
   padding-bottom: 21px;
   max-width: 288px;
   margin: 0 auto;
+  margin-bottom: 80px;
 }
 
 .news__list {
@@ -27,14 +31,15 @@
     padding: 32px 0;
   }
 
-  .news {
-    padding: 40px 0;
+  .news__title {
+    margin-top: 40px;
   }
 
   .news__button-more {
     max-width: 240px;
     padding-top: 15px;
     padding-bottom: 17px;
+    margin-bottom: 40px;
   }
 }
 
@@ -53,12 +58,13 @@
     grid-gap: 10px;
   }
 
-  .news {
-    padding: 32px 0;
+  .news__title {
+    margin-top: 32px;
   }
 
   .news__button-more {
     max-width: 100%;
+    margin-bottom: 32px;
   }
 }
 

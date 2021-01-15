@@ -11,11 +11,11 @@ function RegisterSuccess({ openPopup }) {
         You've successfully registered!
       </h2>
       <a
-          className="popup__link register-success__link"
-          onClick={handleLogin}
-        >
-          Log in
-        </a>
+        className="popup__link register-success__link"
+        onClick={handleLogin}
+      >
+        Log in
+      </a>
     </div>
   );
 }

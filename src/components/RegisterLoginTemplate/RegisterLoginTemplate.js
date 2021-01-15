@@ -51,13 +51,10 @@ function AuthForm({
             minLength="2"
             maxLength="80"
           />
-          <span className="register-login__error">'Адрес должен содержать специальный символАдрес
-            должен содержать специальный символ "@", который отделяет имя пользователя
-            "@", который отделяет имя пользователя Адрес должен' {errors.email || ''}</span>
+          <span className="register-login__error">{errors.email || ''}</span>
         </label>
         <label className="register-login__label">
           Password
-
           <input
             type="password"
             name="password"
@@ -70,9 +67,7 @@ function AuthForm({
             maxLength="15"
           />
           <span
-            className="register-login__error">'Адрес должен содержать специальный символАдрес
-            должен содержать специальный символ "@", который отделяет имя пользователя
-            "@", который отделяет имя пользователя Адрес должен'{errors.password || ''}</span>
+            className="register-login__error">{errors.password || ''}</span>
         </label>
         {type === 'register' && (
           <label className="register-login__label">
@@ -90,13 +85,11 @@ function AuthForm({
               required
             />
             <span
-              className="register-login__error">'Адрес должен содержать специальный символАдрес
-            должен содержать специальный символ "@", который отделяет имя пользователя
-            "@", который отделяет имя пользователя Адрес должен'{errors.name || ''}</span>
+              className="register-login__error">{errors.name || ''}</span>
           </label>
         )}
         <p className="register-login__error-total">
-          'Адрес должен содержать '{errorTotal}
+         {errorTotal}
         </p>
         <Button
           type="submit"

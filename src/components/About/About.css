@@ -64,6 +64,10 @@
   .about {
     flex-direction: column;
   }
+
+  .about__photo {
+    margin: 0 0 24px;
+  }
 }
 
 @media all and (max-width: 420px) {

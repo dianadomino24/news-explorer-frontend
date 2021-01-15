@@ -17,15 +17,15 @@ function Main({ searchResults, ...props }) {
         {...props}
       >
       </NewsCardList>
-       {searchResults === 'searching' && <Preloader/>}
-       {searchResults === 'notFound' && <NotFound/>}
-       {searchResults === 'found' && (
-       <NewsCardList
-        type='search'
-        {...props}
-       >
-       </NewsCardList>
-       )}
+      {searchResults === 'searching' && <Preloader/>}
+      {searchResults === 'notFound' && <NotFound/>}
+      {searchResults === 'found' && (
+        <NewsCardList
+          type='search'
+          {...props}
+        >
+        </NewsCardList>
+      )}
       <About/>
     </main>
   );

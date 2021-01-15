@@ -12,7 +12,7 @@ function NewsCardList({
   return (
     <section className="news">
       <Container>
-        <SectionTitle classes='news__title' title='Search results'/>
+        {type === 'search' && <SectionTitle classes='news__title' title='Search results'/>}
         <ul className="news__list">
           {cards.map((card) => (
             <NewsCard
