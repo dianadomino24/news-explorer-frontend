@@ -30,7 +30,9 @@
 .search-form__input::placeholder {
     color: #B6BCBF;
 }
-
+.search-form__input_warning::placeholder {
+  color: #FF0000;
+}
 @media all and (max-width: 768px) {
     .search-form {
         grid-template-columns: auto 160px;
